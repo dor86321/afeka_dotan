@@ -5,7 +5,7 @@ The website is organized for GitHub Pages publishing from the `main` branch and 
 
 ## Repository Name
 
-`Afeka<family_name>`
+`Afeka_dotan`
 
 ## Live Site URL
 
