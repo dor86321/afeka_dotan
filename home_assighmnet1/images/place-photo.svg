@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450">
+  <rect width="800" height="450" fill="#bfe3ff"/>
+  <rect y="300" width="800" height="150" fill="#6dbb75"/>
+  <circle cx="680" cy="90" r="45" fill="#ffd86b"/>
+  <polygon points="80,320 230,110 380,320" fill="#6f8aa8"/>
+  <polygon points="260,320 430,130 600,320" fill="#5f7994"/>
+  <polygon points="210,145 230,110 250,145" fill="#ffffff"/>
+  <polygon points="405,165 430,130 455,165" fill="#ffffff"/>
+  <rect x="0" y="260" width="800" height="40" fill="#5ea3d4"/>
+  <text x="400" y="420" font-size="34" text-anchor="middle" fill="#1d3557" font-family="Arial">Travel Photo</text>
+</svg>
