@@ -3,9 +3,9 @@
 This repository contains course assignment websites for an introductory HTML class.
 The website is organized for GitHub Pages publishing from the `main` branch and the `docs` folder.
 
-## Repository Name
+## Repository URL
 
-`Afeka_dotan`
+https://github.com/dor86321/afeka_dotan
 
 ## Live Site URL
 
