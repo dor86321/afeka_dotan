@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2 – AI / CNN Glossary</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/hw2.css">
+</head>
+<body class="dict-body">
+    <header class="hw2-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Back to home</a>
+            <h1>AI and CNN Glossary</h1>
+            <p class="hw2-subtitle">45+ terms · English definitions · Project references</p>
+            <nav class="hw2-top-nav">
+                <a href="index.html" class="nav-link">Model UI</a>
+                <a href="dictionary.html" class="nav-link nav-link--active">Glossary</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-card">
+            <p>
+                This glossary explains machine learning, neural network, and CNN concepts,
+                including terms used in Homework 2 code (<code>js/hw2-model.js</code>).
+                Use the search field to filter quickly.
+            </p>
+        </section>
+
+        <div class="dict-controls">
+            <input
+                type="search"
+                id="dict-search"
+                class="dict-search"
+                placeholder="Search term (English)..."
+                aria-label="Search glossary"
+            >
+            <span id="dict-count" class="dict-count"></span>
+        </div>
+
+        <section id="dict-grid" class="dict-grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container"><p>Glossary · Homework 2</p></div>
+    </footer>
+
+    <script src="js/hw2-dictionary.js"></script>
+</body>
+</html>

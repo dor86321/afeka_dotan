@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development – Course Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="hw2/css/hw2.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="hero-glow hero-glow--secondary" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow--tertiary" aria-hidden="true"></div>
+        <div class="container header-inner">
+            <p class="eyebrow">Afeka · Web Development</p>
+            <h1>Course Assignments Project</h1>
+            <p class="subtitle">Course assignment site – HTML, CSS, and JavaScript</p>
+            <div class="placeholders">
+                <span class="placeholder-chip">Student name: <strong id="student-name">Dor Dotan</strong></span>
+                <span class="placeholder-chip">Course name: <strong id="course-name">Web deployment - 10266</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <nav class="main-nav" aria-label="Main menu">
+            <a href="index.html" class="nav-link nav-link--active">Home</a>
+            <a href="hw1/index.html" class="nav-link">Homework 1</a>
+            <a href="hw2/index.html" class="nav-link">Homework 2 – CNN Model</a>
+        </nav>
+
+        <section class="hw-grid" aria-label="Assignment selection">
+            <article class="hw-card hw-card--hw1">
+                <div class="hw-card__icon" aria-hidden="true">🗺️</div>
+                <h3>Homework 1 – HTML Site</h3>
+                <p>"Top 5 Most Beautiful Places I Visited" with an image map, navigation menu, and destination pages.</p>
+                <a href="hw1/index.html" class="btn btn--primary">Open Homework 1</a>
+            </article>
+
+            <article class="hw-card hw-card--hw2">
+                <div class="hw-card__icon" aria-hidden="true">🧠</div>
+                <h3>Homework 2 – Browser CNN Model</h3>
+                <p>
+                    Canvas shape classifier: manual training, forward pass, backpropagation,
+                    and LocalStorage weight persistence.
+                </p>
+                <a href="hw2/index.html" class="btn btn--accent">Open Homework 2</a>
+            </article>
+        </section>
+
+        <section class="home-dict-section" aria-labelledby="home-dict-heading">
+            <h2 id="home-dict-heading">AI / CNN Glossary (fixed dictionary)</h2>
+            <p class="home-dict-intro">
+                Required terms for the CNN model (40+). Full page:
+                <a href="hw2/dictionary.html">Homework 2 glossary</a>.
+            </p>
+            <div class="dict-controls">
+                <input
+                    type="search"
+                    id="home-dict-search"
+                    class="dict-search"
+                    placeholder="Search term..."
+                    aria-label="Search glossary on home page"
+                >
+                <span id="home-dict-count" class="dict-count"></span>
+            </div>
+            <div id="home-dict-grid" class="dict-grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© Web Development course project · No external libraries</p>
+        </div>
+    </footer>
+
+    <script src="hw2/js/hw2-dictionary.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
