@@ -866,7 +866,7 @@
         setStatus("–", "–", "–", 0);
         document.getElementById("predict-label").textContent = "No prediction yet";
         document.getElementById("confidence-bars").innerHTML = "";
-        bootstrapModel();
+        document.getElementById("progress-fill").style.width = "0%";
     });
 
     document.getElementById("btn-save").addEventListener("click", function () {
