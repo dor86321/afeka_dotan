@@ -154,6 +154,34 @@
     transition: width 0.3s ease;
 }
 
+.network-layout {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-family: ui-monospace, "Cascadia Code", "Consolas", monospace;
+}
+
+.network-layout .net-step {
+    padding: 0.15rem 0;
+    border-left: 2px solid #38bdf8;
+    padding-left: 0.65rem;
+    margin-left: 0.25rem;
+}
+
+.network-layout .net-step--warn {
+    border-left-color: #f87171;
+    color: #fca5a5;
+}
+
+.network-layout .net-arrow {
+    color: #64748b;
+    padding-left: 0.65rem;
+    font-size: 0.8rem;
+}
+
 .predict-main {
     font-size: 1.15rem;
     font-weight: 600;

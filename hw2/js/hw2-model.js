@@ -6,6 +6,17 @@
     var CLASS_NAMES = ["Circle", "Square", "Triangle"];
     var STORAGE_KEY = "afeka_hw2_cnn_model";
     var DRAW_SIZE = 280;
+    var BOOTSTRAP_SAMPLE_COUNT = 30;
+    var SAMPLES_PER_CLASS = 10;
+
+    var DEFAULT_PARAMS = {
+        numLayers: 2,
+        numFilters: 8,
+        filterSize: 3,
+        denseNeurons: 32,
+        learningRate: 0.05,
+        epochs: 40
+    };
 
     var samples = [];
     var model = null;
@@ -546,6 +557,100 @@
         });
         document.getElementById("params-lock-msg").textContent =
             "Parameters are locked after the first training run (per assignment requirements).";
+        renderNetworkLayout(fixedConfig);
+    }
+
+    function unlockParamsUI() {
+        paramsLocked = false;
+        var ids = ["param-layers", "param-filters", "param-filter-size", "param-neurons", "param-lr", "param-epochs"];
+        ids.forEach(function (id) {
+            document.getElementById(id).disabled = false;
+        });
+        document.getElementById("params-lock-msg").textContent =
+            "Parameters are editable before the first training run.";
+        renderNetworkLayout(readParamsFromUI());
+    }
+
+    function resetParamsToDefaults() {
+        applyConfigToUI(DEFAULT_PARAMS);
+    }
+
+    function computeNetworkShape(cfg) {
+        var spatial = INPUT_SIZE;
+        var depth = 1;
+        var steps = [];
+        var li;
+
+        steps.push("Input: " + INPUT_SIZE + "×" + INPUT_SIZE + "×1 (Canvas grid)");
+        for (li = 0; li < cfg.numLayers; li++) {
+            spatial = spatial - cfg.filterSize + 1;
+            if (spatial < 1) {
+                return { valid: false, steps: steps, error: "Conv layer " + (li + 1) + " output size is too small for a " + cfg.filterSize + "×" + cfg.filterSize + " kernel." };
+            }
+            steps.push(
+                "Conv " + (li + 1) + ": " + cfg.numFilters + " filters (" + cfg.filterSize + "×" + cfg.filterSize + ") → " +
+                spatial + "×" + spatial + "×" + cfg.numFilters
+            );
+            steps.push("ReLU + Max pool 2×2");
+            spatial = Math.floor(spatial / 2);
+            if (spatial < 1) {
+                return { valid: false, steps: steps, error: "Feature map too small after pooling at layer " + (li + 1) + "." };
+            }
+            depth = cfg.numFilters;
+        }
+        var flatSize = depth * spatial * spatial;
+        steps.push("Flatten → " + flatSize + " values");
+        steps.push("Dense (hidden): " + cfg.denseNeurons + " neurons + ReLU");
+        steps.push("Dense (output): 3 neurons + Softmax (Circle / Square / Triangle)");
+        return { valid: true, steps: steps, flatSize: flatSize };
+    }
+
+    function validateConfig(cfg) {
+        if (cfg.numLayers < 1 || cfg.numLayers > 2) {
+            return "Use 1–2 convolution layers (3 layers is too deep for a 16×16 input).";
+        }
+        if (cfg.numFilters < 2 || cfg.numFilters > 16) {
+            return "Filters must be between 2 and 16.";
+        }
+        if (cfg.filterSize !== 3 && cfg.filterSize !== 5) {
+            return "Filter size must be 3×3 or 5×5.";
+        }
+        if (cfg.denseNeurons < 8 || cfg.denseNeurons > 64) {
+            return "Dense neurons must be between 8 and 64.";
+        }
+        if (cfg.learningRate < 0.001 || cfg.learningRate > 0.5) {
+            return "Learning rate must be between 0.001 and 0.5.";
+        }
+        if (cfg.epochs < 1 || cfg.epochs > 200) {
+            return "Epochs must be between 1 and 200.";
+        }
+        var shape = computeNetworkShape(cfg);
+        if (!shape.valid) {
+            return shape.error;
+        }
+        return null;
+    }
+
+    function renderNetworkLayout(cfg) {
+        var el = document.getElementById("network-layout");
+        if (!el) {
+            return;
+        }
+        if (!cfg) {
+            el.innerHTML = "<p class=\"net-step\">Set parameters to preview the network.</p>";
+            return;
+        }
+        var shape = computeNetworkShape(cfg);
+        var html = "";
+        shape.steps.forEach(function (step) {
+            html += "<p class=\"net-step\">" + step + "</p><p class=\"net-arrow\">↓</p>";
+        });
+        if (!shape.valid) {
+            html += "<p class=\"net-step net-step--warn\">" + shape.error + "</p>";
+        } else {
+            html += "<p class=\"net-step\">Ready — flat size " + shape.flatSize + ", " + NUM_CLASSES + " classes</p>";
+        }
+        el.innerHTML = html;
     }
 
     function extractGridFromCanvas() {
@@ -662,14 +767,21 @@
         try {
             var data = JSON.parse(raw);
             if (data.weights) {
-                model = ShapeCNN.load(data.weights);
                 fixedConfig = data.fixedConfig || data.weights.config;
+                var cfgErr = validateConfig(fixedConfig);
+                if (cfgErr) {
+                    console.warn("Saved model config invalid:", cfgErr);
+                    return false;
+                }
+                model = ShapeCNN.load(data.weights);
             }
             samples = data.samples || [];
             paramsLocked = !!data.paramsLocked;
             if (paramsLocked) {
                 lockParamsUI();
                 applyConfigToUI(fixedConfig);
+            } else {
+                renderNetworkLayout(readParamsFromUI());
             }
             updateSampleUI();
             return true;
@@ -725,36 +837,40 @@
         var label;
         var k;
         for (label = 0; label < NUM_CLASSES; label++) {
-            for (k = 0; k < 25; k++) {
+            for (k = 0; k < SAMPLES_PER_CLASS; k++) {
                 list.push({ label: label, grid: generateShapeGrid(label, 1.2) });
             }
         }
         return list;
     }
 
+    function createInitialSamples() {
+        samples = buildBootstrapSamples();
+        updateSampleUI();
+    }
+
     function bootstrapModel() {
-        var cfg = {
-            numLayers: 2,
-            numFilters: 8,
-            filterSize: 3,
-            denseNeurons: 32,
-            learningRate: 0.08,
-            epochs: 50
-        };
+        var cfg = Object.assign({}, DEFAULT_PARAMS);
+        var err = validateConfig(cfg);
+        if (err) {
+            alert(err);
+            return;
+        }
         fixedConfig = cfg;
+        applyConfigToUI(cfg);
+        samples = buildBootstrapSamples();
         model = new ShapeCNN(cfg);
-        var data = buildBootstrapSamples();
-        samples = data.slice(0, 30);
         var ep;
+        var result = { loss: 0, accuracy: 0 };
         for (ep = 0; ep < cfg.epochs; ep++) {
-            model.trainEpoch(data, cfg.learningRate);
+            result = model.trainEpoch(samples, cfg.learningRate);
         }
         paramsLocked = true;
         lockParamsUI();
-        applyConfigToUI(cfg);
         saveToStorage();
         updateSampleUI();
-        setStatus(cfg.epochs, 0.15, 0.92, data.length);
+        setStatus(cfg.epochs, result.loss, result.accuracy, samples.length);
+        renderNetworkLayout(cfg);
     }
 
     function setStatus(epoch, loss, acc, sampleN) {
@@ -820,6 +936,11 @@
             return;
         }
         var cfg = paramsLocked && fixedConfig ? fixedConfig : readParamsFromUI();
+        var cfgErr = validateConfig(cfg);
+        if (cfgErr) {
+            alert(cfgErr);
+            return;
+        }
         if (!paramsLocked) {
             fixedConfig = cfg;
             model = new ShapeCNN(cfg);
@@ -854,16 +975,15 @@
             return;
         }
         localStorage.removeItem(STORAGE_KEY);
-        samples = [];
-        paramsLocked = false;
-        fixedConfig = null;
-        ["param-layers", "param-filters", "param-filter-size", "param-neurons", "param-lr", "param-epochs"].forEach(function (id) {
-            document.getElementById(id).disabled = false;
-        });
-        document.getElementById("params-lock-msg").textContent = "Parameters are editable before the first training run.";
         model = null;
-        updateSampleUI();
-        setStatus("–", "–", "–", 0);
+        fixedConfig = null;
+        unlockParamsUI();
+        resetParamsToDefaults();
+        createInitialSamples();
+        drawCtx.fillStyle = "#ffffff";
+        drawCtx.fillRect(0, 0, DRAW_SIZE, DRAW_SIZE);
+        renderPreview(extractGridFromCanvas());
+        setStatus("–", "–", "–", samples.length);
         document.getElementById("predict-label").textContent = "No prediction yet";
         document.getElementById("confidence-bars").innerHTML = "";
         document.getElementById("progress-fill").style.width = "0%";
@@ -890,7 +1010,25 @@
         }
     });
 
+    function setupParamListeners() {
+        var ids = ["param-layers", "param-filters", "param-filter-size", "param-neurons", "param-lr", "param-epochs"];
+        ids.forEach(function (id) {
+            var el = document.getElementById(id);
+            el.addEventListener("input", function () {
+                if (!paramsLocked) {
+                    renderNetworkLayout(readParamsFromUI());
+                }
+            });
+            el.addEventListener("change", function () {
+                if (!paramsLocked) {
+                    renderNetworkLayout(readParamsFromUI());
+                }
+            });
+        });
+    }
+
     setupCanvas();
+    setupParamListeners();
     renderPreview(extractGridFromCanvas());
 
     if (!loadFromStorage()) {
@@ -899,5 +1037,6 @@
         bootstrapModel();
     } else {
         setStatus(fixedConfig ? fixedConfig.epochs : "–", "–", "–", samples.length);
+        renderNetworkLayout(fixedConfig);
     }
 })();
