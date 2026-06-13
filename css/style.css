@@ -190,6 +190,10 @@ body {
     flex: 1;
 }
 
+.hw-card--hw3 {
+    border-color: rgba(52, 211, 153, 0.25);
+}
+
 .hw-card__actions {
     display: flex;
     flex-wrap: wrap;

@@ -1,0 +1,117 @@
+.hw3-body {
+    background: var(--bg);
+}
+
+.hw3-header {
+    padding: 2rem 0 1.5rem;
+    background: linear-gradient(135deg, #14532d 0%, #1e3a5f 55%, #312e81 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hw3-header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    margin: 0.5rem 0 0.25rem;
+}
+
+.hw3-subtitle {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.hw3-top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.hw3-main {
+    padding: 2rem 0 3rem;
+}
+
+.hw3-intro p {
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+}
+
+.hw3-meta {
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.panel {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow);
+}
+
+.panel h2 {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.hw3-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hw3-card {
+    background: linear-gradient(160deg, var(--surface) 0%, var(--surface-2) 100%);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hw3-card h3 {
+    font-size: 1.1rem;
+}
+
+.hw3-card p {
+    color: var(--muted);
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.hw3-diagram {
+    background: #0a0e14;
+    padding: 1.25rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--muted);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hw3-checklist ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--muted);
+}
+
+.hw3-checklist li {
+    margin-bottom: 0.5rem;
+}
+
+.hw3-checklist a {
+    color: var(--accent);
+}
+
+.hw3-checklist code {
+    background: var(--surface-2);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.hw-card--hw3 {
+    border-color: rgba(52, 211, 153, 0.25);
+}

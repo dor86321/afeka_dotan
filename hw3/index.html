@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 – n8n AI Travel Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/hw3.css">
+</head>
+<body class="hw3-body">
+    <header class="hw3-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Back to home</a>
+            <h1>AI Travel Page Generator</h1>
+            <p class="hw3-subtitle">n8n · Google Sheets · Groq · Gmail · GitHub</p>
+            <nav class="hw3-top-nav" aria-label="Homework 3 sections">
+                <a href="index.html" class="nav-link nav-link--active">Overview</a>
+                <a href="README.md" class="nav-link">Full documentation</a>
+                <a href="templates/travel-page-template.html" class="nav-link">HTML template</a>
+                <a href="SUBMISSION_SLIDES.md" class="nav-link">Submission slides</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container hw3-main">
+        <section class="hw3-intro panel">
+            <h2>Assignment overview</h2>
+            <p>
+                Automate a travel landing page from a city or country entered in Google Sheets.
+                Groq generates content; n8n builds responsive HTML with images and a map; Gmail handles
+                approve/reject; approved runs update the sheet; every execution is backed up to GitHub.
+            </p>
+            <p class="hw3-meta">
+                <strong>Student:</strong> Dor Dotan · <strong>Course:</strong> Web deployment - 10266
+            </p>
+        </section>
+
+        <section class="hw3-grid" aria-label="Deliverables">
+            <article class="hw3-card">
+                <h3>📋 Main guide</h3>
+                <p>Architecture, nodes, prompts, API keys, tester guide, known issues.</p>
+                <a href="README.md" class="btn btn--primary">Open README.md</a>
+            </article>
+
+            <article class="hw3-card">
+                <h3>⚙️ n8n workflow</h3>
+                <p>Import into n8n: Sheets trigger → Groq → HTML → GitHub → Gmail approval loop.</p>
+                <a href="workflow/travel-page-automation.json" class="btn btn--accent">Download workflow JSON</a>
+            </article>
+
+            <article class="hw3-card">
+                <h3>🎨 HTML template</h3>
+                <p>Responsive travel page with hero, gallery, attractions, and embedded map.</p>
+                <a href="templates/travel-page-template.html" class="btn btn--ghost">View template</a>
+            </article>
+
+            <article class="hw3-card">
+                <h3>🤖 Groq prompts</h3>
+                <p>Production prompts A–D: content, HTML, regeneration with/without comment.</p>
+                <a href="prompts/groq-prompts.md" class="btn btn--ghost">Open prompts</a>
+            </article>
+
+            <article class="hw3-card">
+                <h3>📊 Google Sheets</h3>
+                <p>Column layout, status values, and trigger instructions.</p>
+                <a href="google-sheets/SETUP.md" class="btn btn--ghost">Sheet setup</a>
+            </article>
+
+            <article class="hw3-card">
+                <h3>📽️ Submission</h3>
+                <p>Slide content for presentation and checklist.</p>
+                <a href="SUBMISSION_SLIDES.md" class="btn btn--ghost">Submission slides</a>
+            </article>
+        </section>
+
+        <section class="hw3-flow panel">
+            <h2>Workflow flow</h2>
+            <pre class="hw3-diagram" aria-label="Workflow diagram">Google Sheets Trigger (Pending)
+    → Get Row → Prepare Prompt → Groq JSON → Validate JSON
+    → Build data → HTML → GitHub (travel-pages/ + backups/)
+    → Gmail Send and Wait (Approve / Reject + Comment)
+    → IF approved?
+         YES → Update Sheets + confirmation email
+         NO  → Version++ → Regenerate (comment / no comment) → loop (max 3)</pre>
+        </section>
+
+        <section class="hw3-sheet panel">
+            <h2>Google Sheet</h2>
+            <p>
+                <a href="https://docs.google.com/spreadsheets/d/1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Open TravelRequests spreadsheet
+                </a>
+                · Sheet ID: <code>1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA</code> · Tab: <code>Sheet1</code>
+            </p>
+        </section>
+
+        <section class="hw3-checklist panel">
+            <h2>Quick start</h2>
+            <ol>
+                <li>Use the <a href="https://docs.google.com/spreadsheets/d/1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA/edit?usp=sharing">Google Sheet</a> (see <a href="google-sheets/SETUP.md">setup guide</a>).</li>
+                <li>Import <code>workflow/travel-page-automation.json</code> into n8n.</li>
+                <li>Add credentials: Groq, Google Sheets, Gmail, GitHub.</li>
+                <li>Set a row to <code>Status = Pending</code> and activate the workflow.</li>
+                <li>Screenshot the generated HTML page for submission.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Homework 3 · n8n automation assignment</p>
+        </div>
+    </footer>
+</body>
+</html>

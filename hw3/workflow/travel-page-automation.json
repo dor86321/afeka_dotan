@@ -1,0 +1,637 @@
+{
+  "name": "AI Travel Page Generator (Sheets → Groq → GitHub → Gmail)",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": { "item": [{ "mode": "everyMinute" }] },
+        "documentId": {
+          "__rl": true,
+          "value": "1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA",
+          "mode": "id"
+        },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "event": "rowUpdate",
+        "options": {}
+      },
+      "id": "node-01-trigger",
+      "name": "Node 1 – Google Sheets Trigger",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [0, 400],
+      "notes": "Fires on row update. Downstream IF checks Status=Pending."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "cond-pending",
+              "leftValue": "={{ $json.Status }}",
+              "rightValue": "Pending",
+              "operator": { "type": "string", "operation": "equals" }
+            },
+            {
+              "id": "cond-city",
+              "leftValue": "={{ $json.CityOrCountry }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEmpty" }
+            },
+            {
+              "id": "cond-email",
+              "leftValue": "={{ $json.UserEmail }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEmpty" }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "node-01b-if-pending",
+      "name": "Status is Pending?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [220, 400]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA",
+          "mode": "id"
+        },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "Generating",
+            "CreatedAt": "={{ $json.CreatedAt || $now.toISO() }}",
+            "UpdatedAt": "={{ $now.toISO() }}"
+          },
+          "matchingColumns": ["ID"]
+        },
+        "options": {}
+      },
+      "id": "node-01c-generating",
+      "name": "Set status Generating",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA",
+          "mode": "id"
+        },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "filtersUI": {
+          "values": [{ "lookupColumn": "ID", "lookupValue": "={{ $json.ID }}" }]
+        },
+        "options": {}
+      },
+      "id": "node-02-get-row",
+      "name": "Node 2 – Google Sheets Get Row",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [660, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a1",
+              "name": "promptLocation",
+              "value": "={{ $json.CityOrCountry }}",
+              "type": "string"
+            },
+            {
+              "id": "a2",
+              "name": "promptVersion",
+              "value": "={{ Number($json.Version || 1) }}",
+              "type": "number"
+            },
+            {
+              "id": "a3",
+              "name": "promptUserEmail",
+              "value": "={{ $json.UserEmail }}",
+              "type": "string"
+            },
+            {
+              "id": "a4",
+              "name": "promptSystem",
+              "value": "You are a professional travel writer. Output ONLY valid JSON with title, introduction, 3+ attractions, descriptions, coordinates, image URLs or imageSearchTerms, mapCenter, seoTitle, shortSummary.",
+              "type": "string"
+            },
+            {
+              "id": "a5",
+              "name": "promptUser",
+              "value": "=Create travel content for: {{ $json.CityOrCountry }}. Return JSON schema: { title, locationTitle, country, introduction (HTML <p>), travelRecommendations [5 strings], attractions [{ name, description, latitude, longitude, category }], imageSearchTerms [3], mapCenter { latitude, longitude, zoom }, seoTitle, shortSummary }",
+              "type": "string"
+            }
+          ]
+        },
+        "options": { "includeOtherFields": true }
+      },
+      "id": "node-03-prepare-prompt",
+      "name": "Node 3 – Set Prepare Prompt",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [880, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"temperature\": 0.7,\n  \"response_format\": { \"type\": \"json_object\" },\n  \"messages\": [\n    { \"role\": \"system\", \"content\": $json.promptSystem },\n    { \"role\": \"user\", \"content\": $json.promptUser }\n  ]\n}",
+        "options": {}
+      },
+      "id": "node-04-groq-travel",
+      "name": "Node 4 – Groq Travel Data Generator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1100, 300],
+      "credentials": {
+        "httpHeaderAuth": { "id": "REPLACE_GROQ_CREDENTIAL_ID", "name": "Groq API" }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst row = $('Node 2 – Google Sheets Get Row').first().json;\nlet data = {};\nif (input.choices?.[0]?.message?.content) {\n  try { data = JSON.parse(input.choices[0].message.content); } catch (e) { data = {}; }\n} else {\n  data = { ...input };\n  delete data.choices;\n  delete data.row;\n}\nconst location = data.locationTitle || data.title || row.CityOrCountry;\nlet version = Number(row.Version || 1);\ntry { if ($('Update sheet on Reject').first()) version = Number(row.Version || 1) + 1; } catch (e) {}\nif (input.version) version = Number(input.version);\nconst mapCenter = data.mapCenter || { latitude: 48.8566, longitude: 2.3522, zoom: 12 };\nconst fallbackAttractions = [\n  { name: location + ' City Center', description: 'Explore the downtown area.', latitude: mapCenter.latitude, longitude: mapCenter.longitude, category: 'culture' },\n  { name: location + ' Historic Quarter', description: 'Historic streets and landmarks.', latitude: mapCenter.latitude + 0.01, longitude: mapCenter.longitude + 0.01, category: 'history' },\n  { name: location + ' Scenic Viewpoint', description: 'Panoramic views.', latitude: mapCenter.latitude - 0.008, longitude: mapCenter.longitude + 0.012, category: 'viewpoint' }\n];\nlet attractions = Array.isArray(data.attractions) ? data.attractions : [];\nif (attractions.length < 3) attractions = [...attractions, ...fallbackAttractions].slice(0, Math.max(4, attractions.length));\nattractions = attractions.map((a, i) => ({\n  name: a.name || 'Attraction ' + (i + 1),\n  description: a.description || 'A recommended place in ' + location,\n  latitude: Number(a.latitude) || mapCenter.latitude + i * 0.005,\n  longitude: Number(a.longitude) || mapCenter.longitude + i * 0.005,\n  category: a.category || 'sight'\n}));\nconst imageSearchTerms = (data.imageSearchTerms || [location + ' landmark', location + ' skyline', location + ' culture']).slice(0, 3);\nconst travelRecommendations = Array.isArray(data.travelRecommendations) && data.travelRecommendations.length >= 3 ? data.travelRecommendations : ['Plan ahead', 'Use public transport', 'Try local food', 'Respect customs', 'Check weather'];\nconst coordinates = attractions.map(a => ({ name: a.name, latitude: a.latitude, longitude: a.longitude }));\nreturn [{ json: {\n  title: data.title || location,\n  locationTitle: location,\n  country: data.country || '',\n  introduction: data.introduction || '<p>Welcome to ' + location + '.</p>',\n  travelRecommendations,\n  attractions,\n  imageSearchTerms,\n  mapCenter,\n  seoTitle: data.seoTitle || location + ' Travel Guide',\n  shortSummary: data.shortSummary || 'Discover ' + location,\n  coordinates,\n  row,\n  version,\n  UserEmail: row.UserEmail,\n  CityOrCountry: row.CityOrCountry,\n  userComment: input.userComment || row.UserComment || ''\n}}];"
+      },
+      "id": "node-05-validate",
+      "name": "Node 5 – Validate AI JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1320, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nconst row = data.row || $('Node 2 – Google Sheets Get Row').first().json;\nconst location = data.locationTitle || data.title || row.CityOrCountry;\nconst version = Number(data.version || row.Version || 1);\nconst terms = data.imageSearchTerms || ['landmark', 'cityscape', 'culture'];\nconst images = terms.slice(0, 3).map(term => ({ url: 'https://source.unsplash.com/800x600/?' + encodeURIComponent(term), caption: term, alt: location + ' - ' + term }));\nconst center = data.mapCenter || data.attractions?.[0] || { latitude: 48.8566, longitude: 2.3522, zoom: 12 };\nconst lat = Number(center.latitude);\nconst lng = Number(center.longitude);\nconst zoom = center.zoom || 13;\nconst mapEmbedUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=' + (lng - 0.08) + '%2C' + (lat - 0.05) + '%2C' + (lng + 0.08) + '%2C' + (lat + 0.05) + '&layer=mapnik&marker=' + lat + '%2C' + lng;\nconst mapLink = 'https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=' + zoom + '/' + lat + '/' + lng;\nconst slug = location.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');\nconst ts = $now.toFormat('yyyy-MM-dd-HH-mm-ss');\nconst htmlFileName = slug + '-v' + version + '-' + ts + '.html';\nconst jsonFileName = slug + '-v' + version + '-' + ts + '.json';\nconst coordinates = (data.coordinates || data.attractions || []).map(a => ({ name: a.name, latitude: a.latitude, longitude: a.longitude }));\nconst metadata = { location, country: data.country, version, rowId: row.ID, cityOrCountry: row.CityOrCountry, userEmail: row.UserEmail, attractions: data.attractions, coordinates, mapCenter: center, mapLink, mapEmbedUrl, seoTitle: data.seoTitle, shortSummary: data.shortSummary, executionId: $execution.id, createdAt: row.CreatedAt || new Date().toISOString(), updatedAt: new Date().toISOString() };\nreturn [{ json: { ...data, location, locationTitle: location, images, mapEmbedUrl, mapLink, htmlFileName, jsonFileName, htmlFilePath: 'travel-pages/' + htmlFileName, jsonFilePath: 'backups/' + jsonFileName, coordinates, metadata, version, row, UserEmail: row.UserEmail, CityOrCountry: row.CityOrCountry } }];"
+      },
+      "id": "node-05b-build",
+      "name": "Build page data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1540, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nfunction esc(s) { return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;'); }\nconst intro = data.introduction || '';\nconst recs = (data.travelRecommendations || []).map(r => '<li>' + esc(r) + '</li>').join('');\nconst attractions = data.attractions || [];\nconst attractionsHtml = attractions.map(a => '<article class=\"card\"><span class=\"badge\">' + esc(a.category) + '</span><h3>' + esc(a.name) + '</h3><p>' + esc(a.description) + '</p><p class=\"coords\">' + a.latitude + ', ' + a.longitude + '</p></article>').join('');\nconst coordsRows = attractions.map(a => '<tr><td>' + esc(a.name) + '</td><td>' + a.latitude + '</td><td>' + a.longitude + '</td></tr>').join('');\nconst imagesHtml = (data.images || []).map((img,i) => '<figure><img src=\"' + esc(img.url) + '\" alt=\"' + esc(img.alt) + '\" loading=\"lazy\"><figcaption>' + esc(img.caption) + '</figcaption></figure>').join('');\nconst mapEmbed = '<iframe title=\"Map\" src=\"' + esc(data.mapEmbedUrl) + '\" loading=\"lazy\"></iframe>';\nconst hero = (data.images && data.images[0]) ? data.images[0].url : 'https://source.unsplash.com/1200x600/?travel';\nconst html = '<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>' + esc(data.location) + '</title><style>:root{--bg:#0f1419;--surface:#1a2332;--accent:#3d9be9;--text:#e8eef4;--muted:#94a3b8}*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}.hero{min-height:45vh;padding:3rem 1.5rem;background:linear-gradient(135deg,#1e3a5f,#0f1419),url(' + hero + ') center/cover}.container{max-width:1100px;margin:auto;padding:2rem 1.5rem}h2{border-bottom:2px solid var(--accent)}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}.attractions{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}.card{background:var(--surface);padding:1.25rem;border-radius:12px}iframe{width:100%;height:400px;border:0;border-radius:12px}footer{text-align:center;padding:2rem;color:var(--muted)}@media(max-width:600px){.hero{min-height:35vh}.gallery{grid-template-columns:1fr}}</style></head><body><header class=\"hero\"><h1>' + esc(data.location) + '</h1><p>AI Travel Guide</p></header><main class=\"container\"><section><h2>Introduction</h2>' + intro + '</section><section class=\"gallery\"><h2>Gallery</h2>' + imagesHtml + '</section><section><h2>Recommendations</h2><ul>' + recs + '</ul></section><section><h2>Attractions</h2><div class=\"attractions\">' + attractionsHtml + '</div></section><section><h2>Map</h2>' + mapEmbed + '<table><thead><tr><th>Place</th><th>Lat</th><th>Lng</th></tr></thead><tbody>' + coordsRows + '</tbody></table></section></main><footer><p>n8n · Groq · ' + new Date().getFullYear() + '</p></footer></body></html>';\nconst owner = 'REPLACE_GITHUB_OWNER';\nconst repo = 'REPLACE_REPO';\nconst githubRawUrl = 'https://raw.githubusercontent.com/' + owner + '/' + repo + '/main/' + data.htmlFilePath;\nconst githubPagesUrl = 'https://' + owner + '.github.io/' + repo + '/' + data.htmlFilePath;\nreturn [{ json: { ...data, html, githubRawUrl, githubPagesUrl, metadata: { ...data.metadata, htmlLength: html.length } } }];"
+      },
+      "id": "node-06-html",
+      "name": "Node 6 – HTML Builder",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1760, 300]
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "create",
+        "owner": "REPLACE_GITHUB_OWNER",
+        "repository": "REPLACE_REPO",
+        "filePath": "={{ $json.htmlFilePath }}",
+        "fileContent": "={{ $json.html }}",
+        "commitMessage": "=n8n: travel page {{ $json.location }} v{{ $json.version }}"
+      },
+      "id": "node-07-gh-html",
+      "name": "Node 7 – GitHub Upload HTML",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [1980, 200],
+      "credentials": {
+        "githubApi": { "id": "REPLACE_GITHUB_CREDENTIAL_ID", "name": "GitHub – Travel Backup" }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "create",
+        "owner": "REPLACE_GITHUB_OWNER",
+        "repository": "REPLACE_REPO",
+        "filePath": "={{ $('Build page data').item.json.jsonFilePath }}",
+        "fileContent": "={{ JSON.stringify($('Node 6 – HTML Builder').item.json.metadata, null, 2) }}",
+        "commitMessage": "=n8n: JSON backup {{ $('Build page data').item.json.jsonFileName }}"
+      },
+      "id": "node-08-gh-json",
+      "name": "Node 8 – GitHub Upload JSON Backup",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [1980, 400],
+      "credentials": {
+        "githubApi": { "id": "REPLACE_GITHUB_CREDENTIAL_ID", "name": "GitHub – Travel Backup" }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "id": "node-merge-gh",
+      "name": "Merge GitHub outputs",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [2200, 300]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA",
+          "mode": "id"
+        },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "AwaitingApproval",
+            "GitHubHTMLLink": "={{ $('Node 7 – GitHub Upload HTML').item.json.commit.html_url || $('Node 7 – GitHub Upload HTML').item.json.content.html_url }}",
+            "UpdatedAt": "={{ $now.toISO() }}"
+          },
+          "matchingColumns": ["ID"]
+        }
+      },
+      "id": "node-awaiting",
+      "name": "Set AwaitingApproval",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [2420, 300]
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "sendTo": "={{ $('Build page data').item.json.UserEmail }}",
+        "subject": "=Approve travel page: {{ $('Build page data').item.json.location }} (v{{ $('Build page data').item.json.version }})",
+        "message": "=<h2>Travel page ready for review</h2><p>Destination: <strong>{{ $('Build page data').item.json.location }}</strong></p><p>Version: {{ $('Build page data').item.json.version }}</p><p><a href=\"{{ $('Node 6 – HTML Builder').item.json.githubRawUrl }}\">Preview HTML on GitHub</a></p><p>Choose <strong>Approve</strong> to accept, or <strong>Reject</strong> to request a new version. Add an optional comment when rejecting.</p>",
+        "responseType": "customForm",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Decision",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [{ "option": "Approve" }, { "option": "Reject" }]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Comment",
+              "fieldType": "text",
+              "requiredField": false
+            }
+          ]
+        },
+        "options": {
+          "limitWaitTime": { "values": { "resumeUnit": "days", "resumeAmount": 7 } }
+        }
+      },
+      "id": "node-09-gmail",
+      "name": "Node 9 – Gmail Send and Wait",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [2640, 300],
+      "credentials": {
+        "gmailOAuth2": { "id": "REPLACE_GMAIL_CREDENTIAL_ID", "name": "Gmail account" }
+      },
+      "webhookId": "travel-approval-webhook"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "approved",
+              "leftValue": "={{ $json.data.Decision }}",
+              "rightValue": "Approve",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ]
+        }
+      },
+      "id": "node-10-if",
+      "name": "Node 10 – IF Approval Check",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [2860, 300]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA",
+          "mode": "id"
+        },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "Approved",
+            "GeneratedHTML": "={{ $('Node 6 – HTML Builder').item.json.githubRawUrl }}",
+            "GitHubHTMLLink": "={{ $('Node 7 – GitHub Upload HTML').item.json.commit.html_url }}",
+            "GitHubJSONBackupLink": "={{ $('Node 8 – GitHub Upload JSON Backup').item.json.commit.html_url }}",
+            "MapLink": "={{ $('Build page data').item.json.mapLink }}",
+            "Attractions": "={{ JSON.stringify($('Build page data').item.json.attractions) }}",
+            "Coordinates": "={{ JSON.stringify($('Build page data').item.json.coordinates) }}",
+            "UserComment": "={{ $('Node 9 – Gmail Send and Wait').item.json.data.Comment || '' }}",
+            "UpdatedAt": "={{ $now.toISO() }}"
+          },
+          "matchingColumns": ["ID"]
+        }
+      },
+      "id": "node-11a-approved",
+      "name": "Node 11A – Update Google Sheets Approved",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [3080, 160]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Build page data').item.json.UserEmail }}",
+        "subject": "=Approved: {{ $('Build page data').item.json.location }}",
+        "message": "=<p>Your travel page was <strong>approved</strong>.</p><ul><li><a href=\"{{ $('Node 6 – HTML Builder').item.json.githubRawUrl }}\">HTML page</a></li><li><a href=\"{{ $('Node 7 – GitHub Upload HTML').item.json.commit.html_url }}\">GitHub HTML backup</a></li><li><a href=\"{{ $('Node 8 – GitHub Upload JSON Backup').item.json.commit.html_url }}\">GitHub JSON backup</a></li><li>Google Sheet row ID: {{ $('Node 2 – Google Sheets Get Row').item.json.ID }}</li></ul>",
+        "options": {}
+      },
+      "id": "node-15-final",
+      "name": "Node 15 – Final Gmail Confirmation",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [3300, 160],
+      "credentials": {
+        "gmailOAuth2": { "id": "REPLACE_GMAIL_CREDENTIAL_ID", "name": "Gmail account" }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA",
+          "mode": "id"
+        },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "Regenerating",
+            "UserComment": "={{ $('Node 9 – Gmail Send and Wait').item.json.data.Comment || '' }}",
+            "Version": "={{ Number($('Node 2 – Google Sheets Get Row').item.json.Version || 1) + 1 }}",
+            "UpdatedAt": "={{ $now.toISO() }}"
+          },
+          "matchingColumns": ["ID"]
+        }
+      },
+      "id": "node-reject-update",
+      "name": "Update sheet on Reject",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [3080, 420]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "max-regen",
+              "leftValue": "={{ Number($('Node 2 – Google Sheets Get Row').item.json.Version || 1) + 1 }}",
+              "rightValue": 3,
+              "operator": { "type": "number", "operation": "gt" }
+            }
+          ]
+        }
+      },
+      "id": "node-max-regen",
+      "name": "Max regenerations reached?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [3300, 420]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA",
+          "mode": "id"
+        },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": { "Status": "Error", "UpdatedAt": "={{ $now.toISO() }}" },
+          "matchingColumns": ["ID"]
+        }
+      },
+      "id": "node-set-error",
+      "name": "Set status Error (max attempts)",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [3520, 520]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Build page data').item.json.UserEmail }}",
+        "subject": "=Max regenerations reached: {{ $('Build page data').item.json.location }}",
+        "message": "=<p>Maximum of 3 page versions was reached for <strong>{{ $('Build page data').item.json.location }}</strong>. Please contact support or set Status to Pending with Version=1 to restart.</p>",
+        "options": {}
+      },
+      "id": "node-max-email",
+      "name": "Max regen notification email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [3740, 520],
+      "credentials": {
+        "gmailOAuth2": { "id": "REPLACE_GMAIL_CREDENTIAL_ID", "name": "Gmail account" }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Node 9 – Gmail Send and Wait').item.json.data.Comment || '' }}",
+                    "rightValue": "",
+                    "operator": { "type": "string", "operation": "notEmpty" }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "With comment"
+            }
+          ]
+        },
+        "options": { "fallbackOutput": "extra" }
+      },
+      "id": "node-11b-switch",
+      "name": "Node 11B – Check Comment",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [3520, 360]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"temperature\": 0.85,\n  \"response_format\": { \"type\": \"json_object\" },\n  \"messages\": [\n    { \"role\": \"system\", \"content\": \"Apply user feedback to travel JSON. Same schema as initial generation. Output ONLY valid JSON.\" },\n    { \"role\": \"user\", \"content\": \"Destination: \" + $('Node 2 – Google Sheets Get Row').item.json.CityOrCountry + \"\\nUser feedback: \" + ($('Node 9 – Gmail Send and Wait').item.json.data.Comment || '') + \"\\nPrevious JSON: \" + JSON.stringify($('Build page data').item.json) + \"\\nVersion: \" + (Number($('Node 2 – Google Sheets Get Row').item.json.Version || 1) + 1) }\n  ]\n}",
+        "options": {}
+      },
+      "id": "node-12b-groq-comment",
+      "name": "Node 12B – Regenerate With Comment",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [3740, 280],
+      "credentials": {
+        "httpHeaderAuth": { "id": "REPLACE_GROQ_CREDENTIAL_ID", "name": "Groq API" }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"temperature\": 0.9,\n  \"response_format\": { \"type\": \"json_object\" },\n  \"messages\": [\n    { \"role\": \"system\", \"content\": \"Generate a DIFFERENT travel JSON for the same destination. New attractions, intro angle, and image terms. Same schema. Output ONLY valid JSON.\" },\n    { \"role\": \"user\", \"content\": \"Destination: \" + $('Node 2 – Google Sheets Get Row').item.json.CityOrCountry + \"\\nPrevious JSON: \" + JSON.stringify($('Build page data').item.json) + \"\\nVersion: \" + (Number($('Node 2 – Google Sheets Get Row').item.json.Version || 1) + 1) + \"\\nProduce an alternative page without user comments.\" }\n  ]\n}",
+        "options": {}
+      },
+      "id": "node-13b-groq-alt",
+      "name": "Node 13B – Regenerate Without Comment",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [3740, 440],
+      "credentials": {
+        "httpHeaderAuth": { "id": "REPLACE_GROQ_CREDENTIAL_ID", "name": "Groq API" }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Setup checklist\n1. Sheet ID pre-set · tab Sheet1\n2. Replace REPLACE_GITHUB_OWNER / REPLACE_REPO in GitHub + HTML nodes\n3. Groq Header Auth: Bearer gsk_...\n4. Google Sheets + Gmail OAuth2\n5. Activate workflow\n6. Sheet columns: ID, CityOrCountry, UserEmail, Status, GeneratedHTML, GitHubHTMLLink, GitHubJSONBackupLink, MapLink, Attractions, Coordinates, UserComment, Version, CreatedAt, UpdatedAt",
+        "height": 340,
+        "width": 420
+      },
+      "id": "sticky-setup",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [-40, 120]
+    }
+  ],
+  "connections": {
+    "Node 1 – Google Sheets Trigger": {
+      "main": [[{ "node": "Status is Pending?", "type": "main", "index": 0 }]]
+    },
+    "Status is Pending?": {
+      "main": [
+        [{ "node": "Set status Generating", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Set status Generating": {
+      "main": [[{ "node": "Node 2 – Google Sheets Get Row", "type": "main", "index": 0 }]]
+    },
+    "Node 2 – Google Sheets Get Row": {
+      "main": [[{ "node": "Node 3 – Set Prepare Prompt", "type": "main", "index": 0 }]]
+    },
+    "Node 3 – Set Prepare Prompt": {
+      "main": [[{ "node": "Node 4 – Groq Travel Data Generator", "type": "main", "index": 0 }]]
+    },
+    "Node 4 – Groq Travel Data Generator": {
+      "main": [[{ "node": "Node 5 – Validate AI JSON", "type": "main", "index": 0 }]]
+    },
+    "Node 5 – Validate AI JSON": {
+      "main": [[{ "node": "Build page data", "type": "main", "index": 0 }]]
+    },
+    "Build page data": {
+      "main": [[{ "node": "Node 6 – HTML Builder", "type": "main", "index": 0 }]]
+    },
+    "Node 6 – HTML Builder": {
+      "main": [
+        [
+          { "node": "Node 7 – GitHub Upload HTML", "type": "main", "index": 0 },
+          { "node": "Node 8 – GitHub Upload JSON Backup", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Node 7 – GitHub Upload HTML": {
+      "main": [[{ "node": "Merge GitHub outputs", "type": "main", "index": 0 }]]
+    },
+    "Node 8 – GitHub Upload JSON Backup": {
+      "main": [[{ "node": "Merge GitHub outputs", "type": "main", "index": 1 }]]
+    },
+    "Merge GitHub outputs": {
+      "main": [[{ "node": "Set AwaitingApproval", "type": "main", "index": 0 }]]
+    },
+    "Set AwaitingApproval": {
+      "main": [[{ "node": "Node 9 – Gmail Send and Wait", "type": "main", "index": 0 }]]
+    },
+    "Node 9 – Gmail Send and Wait": {
+      "main": [[{ "node": "Node 10 – IF Approval Check", "type": "main", "index": 0 }]]
+    },
+    "Node 10 – IF Approval Check": {
+      "main": [
+        [{ "node": "Node 11A – Update Google Sheets Approved", "type": "main", "index": 0 }],
+        [{ "node": "Update sheet on Reject", "type": "main", "index": 0 }]
+      ]
+    },
+    "Node 11A – Update Google Sheets Approved": {
+      "main": [[{ "node": "Node 15 – Final Gmail Confirmation", "type": "main", "index": 0 }]]
+    },
+    "Update sheet on Reject": {
+      "main": [[{ "node": "Max regenerations reached?", "type": "main", "index": 0 }]]
+    },
+    "Max regenerations reached?": {
+      "main": [
+        [
+          { "node": "Set status Error (max attempts)", "type": "main", "index": 0 }
+        ],
+        [{ "node": "Node 11B – Check Comment", "type": "main", "index": 0 }]
+      ]
+    },
+    "Set status Error (max attempts)": {
+      "main": [[{ "node": "Max regen notification email", "type": "main", "index": 0 }]]
+    },
+    "Node 11B – Check Comment": {
+      "main": [
+        [{ "node": "Node 12B – Regenerate With Comment", "type": "main", "index": 0 }],
+        [{ "node": "Node 13B – Regenerate Without Comment", "type": "main", "index": 0 }]
+      ]
+    },
+    "Node 12B – Regenerate With Comment": {
+      "main": [[{ "node": "Node 5 – Validate AI JSON", "type": "main", "index": 0 }]]
+    },
+    "Node 13B – Regenerate Without Comment": {
+      "main": [[{ "node": "Node 5 – Validate AI JSON", "type": "main", "index": 0 }]]
+    }
+  },
+  "pinData": {},
+  "settings": { "executionOrder": "v1" },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "afeka-travel-assignment"
+  }
+}
