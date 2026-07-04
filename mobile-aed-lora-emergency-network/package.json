@@ -1,0 +1,17 @@
+{
+  "name": "mobile-aed-lora-emergency-network",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix simulator-service\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix backend && npm run build --prefix simulator-service && npm run build --prefix frontend",
+    "seed": "npm run prisma:migrate --prefix backend && npm run seed --prefix backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Course project: Mobile AED LoRa Emergency Network",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}

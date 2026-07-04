@@ -1,0 +1,4072 @@
+{
+  "telemetry": [
+    {
+      "id": "c048bcc8-ee2f-4bd3-9c79-c6ec53a7a02d",
+      "deviceId": "cmr390xan0008mttwx4dg5jey",
+      "type": "HEARTBEAT",
+      "payload": {
+        "deviceId": "cmr390xan0008mttwx4dg5jey",
+        "batteryLevel": 15,
+        "lat": 32.1,
+        "lng": 34.9,
+        "hasLora": true
+      },
+      "timestamp": "2026-07-02T08:45:28.450Z"
+    },
+    {
+      "id": "5e837251-3f65-43a1-9766-a9befec31823",
+      "deviceId": "cmr64u0z40003mtx4622r2aqi",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:01:46.590Z"
+    },
+    {
+      "id": "8edd0593-106d-48da-8ebf-d7a601104dae",
+      "deviceId": "cmr64rrfh003dmtbowp0j130f",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:01:46.611Z"
+    },
+    {
+      "id": "90cea0f1-3c98-4ca6-91c7-adb29db54ef0",
+      "deviceId": "cmr64rrfh003dmtbowp0j130f",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr64rrfh003dmtbowp0j130f",
+        "loraId": "IL433-1032",
+        "gatewayId": "cmr64rrl4005cmtbo2dicbtfp",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [
+          "IL433-1000",
+          "IL433-1018"
+        ],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr64v8ua0005mtx4ena68fef",
+          "coordinates": {
+            "lat": 32.073,
+            "lng": 34.786
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T09:01:46.630Z"
+    },
+    {
+      "id": "ac6820d7-f73e-4274-ad49-5349ac0b84df",
+      "deviceId": "cmr64u0z40003mtx4622r2aqi",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:03:00.649Z"
+    },
+    {
+      "id": "adcee58a-c1bf-4867-91a5-6ef29978be5c",
+      "deviceId": "cmr64rreh002zmtbovd5h2hoh",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:03:00.665Z"
+    },
+    {
+      "id": "7f9f82f8-4b06-4f24-ab74-30fffa0e8bc5",
+      "deviceId": "cmr64rreh002zmtbovd5h2hoh",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr64rreh002zmtbovd5h2hoh",
+        "loraId": "IL433-1028",
+        "gatewayId": "cmr64rrl4005cmtbo2dicbtfp",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [
+          "IL433-1000",
+          "IL433-1018"
+        ],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr64wu1p000amtx4q2453vqc",
+          "coordinates": {
+            "lat": 32.084407,
+            "lng": 34.799474
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T09:03:00.679Z"
+    },
+    {
+      "id": "a3a0bbe6-2b78-42ff-acab-9fd3802b2c28",
+      "deviceId": "cmr64rr8g000vmtbo29j30i2j",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:03:00.695Z"
+    },
+    {
+      "id": "e3a8a6dc-d90b-4559-ae02-4fbd967a60f7",
+      "deviceId": "cmr64rr8g000vmtbo29j30i2j",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr64rr8g000vmtbo29j30i2j",
+        "loraId": "IL433-1008",
+        "gatewayId": "cmr64rrl4005cmtbo2dicbtfp",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 2,
+        "carriersUsed": [
+          "IL433-1018",
+          "IL433-1024"
+        ],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr64wu1p000amtx4q2453vqc",
+          "coordinates": {
+            "lat": 32.084407,
+            "lng": 34.799474
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T09:03:00.707Z"
+    },
+    {
+      "id": "2ad17f9d-71af-445b-9fd3-9654810f3bd1",
+      "deviceId": "cmr66spdv0005mt5824mwymml",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:56:23.082Z"
+    },
+    {
+      "id": "a2dbdcfa-4f61-4461-a016-dbbc08c28c79",
+      "deviceId": "cmr66ngha0024mts00jtidrk6",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:56:23.103Z"
+    },
+    {
+      "id": "6103d463-b695-4e55-8f22-c7746c895f3f",
+      "deviceId": "cmr66ngha0024mts00jtidrk6",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "loraId": "IL433-1020",
+        "gatewayId": "cmr66ngqg005dmts0gmjp2l1u",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 1,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+          "coordinates": {
+            "lat": 32.084407,
+            "lng": 34.799474
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T09:56:23.124Z"
+    },
+    {
+      "id": "ce35fc21-df68-4aa4-8914-a0594771892f",
+      "deviceId": "cmr66ngfm001imts0ohzl9abv",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:56:23.141Z"
+    },
+    {
+      "id": "75e72e9d-2a07-44cd-b006-fc8775b6fff6",
+      "deviceId": "cmr66ngfm001imts0ohzl9abv",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "loraId": "IL433-1014",
+        "gatewayId": "cmr66ngqg005dmts0gmjp2l1u",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+          "coordinates": {
+            "lat": 32.084407,
+            "lng": 34.799474
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T09:56:23.155Z"
+    },
+    {
+      "id": "544c668a-520d-4b70-8e69-6099519d59f6",
+      "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:56:23.173Z"
+    },
+    {
+      "id": "001904ed-dddf-4ad8-a42b-f504ef2d7deb",
+      "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T09:56:23.190Z"
+    },
+    {
+      "id": "b51a7d3e-8571-4fee-bcf2-06744ec8c847",
+      "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "loraId": "IL433-1026",
+        "gatewayId": "cmr66ngqg005dmts0gmjp2l1u",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+          "coordinates": {
+            "lat": 32.084407,
+            "lng": 34.799474
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T09:56:23.202Z"
+    },
+    {
+      "id": "c2032200-57f4-48b6-b27b-176fba767c3e",
+      "deviceId": "cmr66spdv0005mt5824mwymml",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:30.187Z"
+    },
+    {
+      "id": "fb7f658e-6c59-4d41-8755-6924b5ae538c",
+      "deviceId": "cmr66ngpw0057mts050xd2snh",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:30.204Z"
+    },
+    {
+      "id": "50556821-a9e7-4800-adeb-05f3333a4d09",
+      "deviceId": "cmr66ngfm001imts0ohzl9abv",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:30.221Z"
+    },
+    {
+      "id": "9807ff3b-dcac-41b0-95f6-99620685a738",
+      "deviceId": "cmr66ngfm001imts0ohzl9abv",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "loraId": "IL433-1014",
+        "gatewayId": "cmr66ngqg005dmts0gmjp2l1u",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+          "coordinates": {
+            "lat": 32.073,
+            "lng": 34.786
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:00:30.236Z"
+    },
+    {
+      "id": "248bf399-5cd7-4d36-91b4-da3df5fff936",
+      "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:30.253Z"
+    },
+    {
+      "id": "e0bc60d0-b51b-48dc-b711-092e4cd1f30a",
+      "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:30.271Z"
+    },
+    {
+      "id": "dfa20d47-90ed-4d36-9d4b-826722b7fa20",
+      "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "loraId": "IL433-1026",
+        "gatewayId": "cmr66ngqg005dmts0gmjp2l1u",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+          "coordinates": {
+            "lat": 32.073,
+            "lng": 34.786
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:00:30.285Z"
+    },
+    {
+      "id": "ca38385b-a362-4f34-87b2-0d71258946fd",
+      "deviceId": "cmr66spdv0005mt5824mwymml",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:34.012Z"
+    },
+    {
+      "id": "076be1af-9e45-4c16-b466-7b69cf979f89",
+      "deviceId": "cmr66ngpw0057mts050xd2snh",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:34.029Z"
+    },
+    {
+      "id": "99dbfda0-f61c-44f5-8d1f-2915351e153d",
+      "deviceId": "cmr66ngfm001imts0ohzl9abv",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:34.046Z"
+    },
+    {
+      "id": "bd3ef27b-4ede-42af-bd12-4ed1822374d0",
+      "deviceId": "cmr66ngfm001imts0ohzl9abv",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "loraId": "IL433-1014",
+        "gatewayId": "cmr66ngqg005dmts0gmjp2l1u",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66yuoa000smt58jwvvsltr",
+          "coordinates": {
+            "lat": 32.073,
+            "lng": 34.786
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:00:34.065Z"
+    },
+    {
+      "id": "4cdf3e2c-eb31-4413-873c-cea218f8b36c",
+      "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:34.081Z"
+    },
+    {
+      "id": "8cb9cbf1-1a2f-4bb1-b033-55b44c58208b",
+      "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:34.097Z"
+    },
+    {
+      "id": "d52bda40-ea93-4a35-bb4b-298ea7f62561",
+      "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "loraId": "IL433-1026",
+        "gatewayId": "cmr66ngqg005dmts0gmjp2l1u",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66yuoa000smt58jwvvsltr",
+          "coordinates": {
+            "lat": 32.073,
+            "lng": 34.786
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:00:34.113Z"
+    },
+    {
+      "id": "2422afd8-2986-4be0-b3c6-fead87f7f2dc",
+      "deviceId": "cmr66ngha0024mts00jtidrk6",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:36.389Z"
+    },
+    {
+      "id": "71707c05-3629-41c2-92b4-d3868386711e",
+      "deviceId": "cmr66ngha0024mts00jtidrk6",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "loraId": "IL433-1020",
+        "gatewayId": "cmr66ngq7005amts03hgkbze3",
+        "gatewayLoraId": "GW-433-NORTH",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66ywie0013mt58l97av6s6",
+          "coordinates": {
+            "lat": 32.081411,
+            "lng": 34.852066
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:00:36.405Z"
+    },
+    {
+      "id": "a93bf4b7-073d-4ebc-b53b-02cd88175037",
+      "deviceId": "cmr66ngmm0041mts0dk088qvx",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:00:36.424Z"
+    },
+    {
+      "id": "4fc7e3da-f0f0-41bc-9497-3459d939b5b3",
+      "deviceId": "cmr66ngmm0041mts0dk088qvx",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr66ngmm0041mts0dk088qvx",
+        "loraId": "IL433-1038",
+        "gatewayId": "cmr66ngq7005amts03hgkbze3",
+        "gatewayLoraId": "GW-433-NORTH",
+        "meshHops": 1,
+        "carriersUsed": [
+          "IL433-1006"
+        ],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr66ywie0013mt58l97av6s6",
+          "coordinates": {
+            "lat": 32.081411,
+            "lng": 34.852066
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:00:36.439Z"
+    },
+    {
+      "id": "77329380-9a12-46e8-a5ef-ff823eb784fa",
+      "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:11:48.507Z"
+    },
+    {
+      "id": "9cb1edc9-7d70-4e41-be34-75e9c4bb9860",
+      "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "loraId": "IL433-1010",
+        "gatewayId": "cmr67br2x005cmtko1sj3qg76",
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 1,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+          "coordinates": {
+            "lat": 32.084407,
+            "lng": 34.799474
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:11:48.530Z"
+    },
+    {
+      "id": "c12aef4f-0ec9-4efe-8d7d-503ed198e4bf",
+      "deviceId": "cmr67bqww003jmtkoldsp3hu9",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:11:48.555Z"
+    },
+    {
+      "id": "4be690c5-abdd-4b10-b381-0e0fba3d3308",
+      "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:14:34.605Z"
+    },
+    {
+      "id": "586c7ba5-33b5-4b1e-bf78-c6f0e8162f6f",
+      "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+      "type": "DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "loraId": "IL433-1010",
+        "gatewayId": "cmr67br2o0059mtkoidpyakrd",
+        "gatewayLoraId": "GW-433-NORTH",
+        "meshHops": 0,
+        "carriersUsed": [],
+        "encrypted": true,
+        "delivered": true,
+        "deviceState": "BEEPING",
+        "payload": {
+          "protocol": "Meshtastic",
+          "frequencyMhz": 433,
+          "encryption": "AES-256",
+          "messageType": "EMERGENCY_AED_REQUEST",
+          "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+          "coordinates": {
+            "lat": 32.102898,
+            "lng": 34.790332
+          },
+          "channel": "emergency-mesh"
+        }
+      },
+      "timestamp": "2026-07-04T10:14:34.622Z"
+    },
+    {
+      "id": "9f1297c9-1ae5-4533-bba8-66abd539a23b",
+      "deviceId": "cmr67bqww003jmtkoldsp3hu9",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:14:34.642Z"
+    },
+    {
+      "id": "921cc1ef-57c4-4fb3-bd13-7235eaef2367",
+      "deviceId": "cmr68fqq50052mtkgs7j95dep",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:43:41.165Z"
+    },
+    {
+      "id": "a152eb13-c6f1-4921-9001-20f863400c8e",
+      "deviceId": "cmr68fqq50052mtkgs7j95dep",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:47:51.987Z"
+    },
+    {
+      "id": "be2a0df2-2c78-4d86-8fb2-3e8bc695726a",
+      "deviceId": "cmr68fqq50052mtkgs7j95dep",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:50:15.770Z"
+    },
+    {
+      "id": "70f75a2b-7980-44d5-80ee-c32d42ef6a61",
+      "deviceId": "cmr691xjy0003mt78lfcff5zc",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:59:20.090Z"
+    },
+    {
+      "id": "0d9c2089-17cf-465d-b742-84d3253da803",
+      "deviceId": "cmr691xjy0003mt78lfcff5zc",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T10:59:48.691Z"
+    },
+    {
+      "id": "52d94145-ffbb-48a3-91d4-42e61a044284",
+      "deviceId": "cmr68x8el0006mttcwmwewftv",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 95,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.483Z"
+    },
+    {
+      "id": "9cbec768-5b3a-400a-bc00-b4679fd7b1d8",
+      "deviceId": "cmr68x8ew0009mttcpvvu649g",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 23,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.493Z"
+    },
+    {
+      "id": "606e3a3b-e289-4509-8db0-d07e3022aaba",
+      "deviceId": "cmr68x8ff000emttcvhuj7p0u",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 86,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.506Z"
+    },
+    {
+      "id": "771b886a-0da6-47ee-a147-19a15de8698b",
+      "deviceId": "cmr68x8fo000hmttcpupbsm71",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 74,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.516Z"
+    },
+    {
+      "id": "47bfd018-6841-4ab7-a659-334ae060fd85",
+      "deviceId": "cmr68x8g1000mmttc3zaruky6",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 72,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.526Z"
+    },
+    {
+      "id": "a86f0c7b-7a99-4fad-adb8-974c92cf6e50",
+      "deviceId": "cmr68x8gi000smttcz9e9sm99",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 33,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.537Z"
+    },
+    {
+      "id": "d6668b2d-d8b4-414e-a24f-ff4013b6d6d6",
+      "deviceId": "cmr68x8gr000vmttcfq8u4021",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 37,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.547Z"
+    },
+    {
+      "id": "c38a60ab-83bd-4924-a710-90d588ed396d",
+      "deviceId": "cmr68x8h40010mttc6659fexk",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 35,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.558Z"
+    },
+    {
+      "id": "aa976e93-97f7-4b10-9337-c35be183e9bc",
+      "deviceId": "cmr68x8hd0013mttcrtletglg",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 37,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.568Z"
+    },
+    {
+      "id": "5c187d29-2b4e-4a13-b44c-9c7f49698459",
+      "deviceId": "cmr68x8hs0018mttcz4zvcmmk",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 30,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:01:09.578Z"
+    },
+    {
+      "id": "92c1ca57-55e7-40d1-8e0e-4e6bad566f6c",
+      "deviceId": "cmr691xjy0003mt78lfcff5zc",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T11:01:31.272Z"
+    },
+    {
+      "id": "78d93730-5d53-4975-b352-8b6c378344cb",
+      "deviceId": "cmr69ggga000fmt78x3oskyyb",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T11:17:41.628Z"
+    },
+    {
+      "id": "1fca535f-7a3c-461a-b2ca-e339c8d6ea14",
+      "deviceId": "cmr691xjy0003mt78lfcff5zc",
+      "type": "ALERT",
+      "payload": {
+        "channel": "CELLULAR",
+        "push": true,
+        "sms": true
+      },
+      "timestamp": "2026-07-04T11:17:41.649Z"
+    },
+    {
+      "id": "b05156a9-8cab-407a-8211-c0d0fea2baec",
+      "deviceId": "cmr68x8el0006mttcwmwewftv",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 94,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.043Z"
+    },
+    {
+      "id": "5613cefc-357c-40b3-8eea-9df94b1a4ea4",
+      "deviceId": "cmr68x8ew0009mttcpvvu649g",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 21,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.053Z"
+    },
+    {
+      "id": "383d786b-9690-416f-a34c-8b836b754840",
+      "deviceId": "cmr68x8ff000emttcvhuj7p0u",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 86,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.064Z"
+    },
+    {
+      "id": "e57ee62c-a7b3-42be-bbac-6fafefd71818",
+      "deviceId": "cmr68x8fo000hmttcpupbsm71",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 73,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.075Z"
+    },
+    {
+      "id": "14359256-ec85-48cb-8ed9-23f29b9a4edc",
+      "deviceId": "cmr68x8g1000mmttc3zaruky6",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 70,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.085Z"
+    },
+    {
+      "id": "801a0bc3-a15a-4687-961f-0d24f7e4284d",
+      "deviceId": "cmr68x8gi000smttcz9e9sm99",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 32,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.097Z"
+    },
+    {
+      "id": "02f3b0a0-28c1-4f9d-8f13-96e51e63ae2f",
+      "deviceId": "cmr68x8gr000vmttcfq8u4021",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 36,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.109Z"
+    },
+    {
+      "id": "a4d8f92a-862e-426c-95b4-9664a5aef49b",
+      "deviceId": "cmr68x8h40010mttc6659fexk",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 33,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.119Z"
+    },
+    {
+      "id": "1f68c202-add9-4777-8a0b-d6e2765277da",
+      "deviceId": "cmr68x8hd0013mttcrtletglg",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 36,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.130Z"
+    },
+    {
+      "id": "3ab7ffc8-da3b-4815-b87f-fb355267a083",
+      "deviceId": "cmr68x8hs0018mttcz4zvcmmk",
+      "type": "HEARTBEAT",
+      "payload": {
+        "battery": 28,
+        "simulated": true
+      },
+      "timestamp": "2026-07-04T11:21:56.140Z"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "c518b31c-23ec-420d-8ddd-46b602ae1409",
+      "incidentId": "cmr39e9620001mtbwxcf8hs5v",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "radius": 3500,
+        "candidates": 5
+      },
+      "timestamp": "2026-07-02T08:45:13.436Z"
+    },
+    {
+      "id": "6272fc5b-8237-4417-93f4-e98c96f55330",
+      "incidentId": "cmr39eggp0002mtbwj4wp9y34",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.09,
+        "lng": 34.8,
+        "radius": 3500,
+        "candidates": 2
+      },
+      "timestamp": "2026-07-02T08:45:22.780Z"
+    },
+    {
+      "id": "90f25dd2-e38b-42b2-b0dd-ccecc8743853",
+      "incidentId": "cmr39eggp0002mtbwj4wp9y34",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "demo",
+        "deviceId": "test-device"
+      },
+      "timestamp": "2026-07-02T08:45:22.840Z"
+    },
+    {
+      "id": "90533562-87be-446d-a797-9cbfc3b9ad56",
+      "incidentId": "cmr3a28i00003mtigrcauzoim",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "radius": 3500,
+        "candidates": 3
+      },
+      "timestamp": "2026-07-02T09:03:52.288Z"
+    },
+    {
+      "id": "0fc1540f-5dfa-4aeb-a090-ca9b222af842",
+      "incidentId": "cmr3a2djc0004mtigtul43x5n",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "radius": 3500,
+        "candidates": 3
+      },
+      "timestamp": "2026-07-02T09:03:58.738Z"
+    },
+    {
+      "id": "c3f783fd-afb9-42bb-89bd-bec144858f2d",
+      "incidentId": "cmr3a2djc0004mtigtul43x5n",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr3a1vmx0002mtig8i31yzqn",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-02T09:04:03.722Z"
+    },
+    {
+      "id": "ec4226d1-c260-4c29-ab96-f3cb3f5c03ea",
+      "incidentId": "cmr3a2djc0004mtigtul43x5n",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr39znir002cmt8g6lbggloh",
+        "volunteer": "מאיה"
+      },
+      "timestamp": "2026-07-02T09:04:08.682Z"
+    },
+    {
+      "id": "51e76d79-9303-4c53-b6d7-af24cf8cf7ed",
+      "incidentId": "cmr3a2djc0004mtigtul43x5n",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr39znmx003smt8gz59sbxuc",
+        "volunteer": "אופיר"
+      },
+      "timestamp": "2026-07-02T09:04:10.973Z"
+    },
+    {
+      "id": "89581ae2-0e02-42d8-8efb-d20bbda7a72d",
+      "incidentId": "cmr3a2wj90005mtigtkrnamke",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "radius": 3500,
+        "candidates": 3
+      },
+      "timestamp": "2026-07-02T09:04:23.359Z"
+    },
+    {
+      "id": "75fc3f5e-4397-4026-ab32-2dc9c2d47fd0",
+      "incidentId": "cmr63yu3f0004mtn82fscygg6",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "radius": 3500,
+        "candidates": 3
+      },
+      "timestamp": "2026-07-04T08:36:34.496Z"
+    },
+    {
+      "id": "79a7ad17-300b-48f9-9419-cbe23dce2034",
+      "incidentId": "cmr63z5t00005mtn8x7qu69uj",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.080829,
+        "lng": 34.800825,
+        "radius": 3500,
+        "candidates": 4
+      },
+      "timestamp": "2026-07-04T08:36:49.570Z"
+    },
+    {
+      "id": "45146f09-e66d-47d2-952c-bf834bbabfa0",
+      "incidentId": "cmr63z5t00005mtn8x7qu69uj",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr63w2rv0002mtn8oxdsia94",
+        "volunteer": "דור דותן"
+      },
+      "timestamp": "2026-07-04T08:37:00.484Z"
+    },
+    {
+      "id": "d99f13fa-ed57-4bc8-86a7-cf99263433f3",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "targetCount": 2
+      },
+      "timestamp": "2026-07-04T09:01:46.567Z"
+    },
+    {
+      "id": "d3155684-f8fb-4254-baed-bc6924184f91",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "phone": "052556622",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:01:46.581Z"
+    },
+    {
+      "id": "44661b43-1335-445e-b915-0816b8590a31",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "phone": "052556622",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:01:46.586Z"
+    },
+    {
+      "id": "9570f08a-1079-4c1c-902c-6200caad78f5",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr64rrfh003dmtbowp0j130f",
+        "phone": "0557456348",
+        "volunteer": "רוני"
+      },
+      "timestamp": "2026-07-04T09:01:46.602Z"
+    },
+    {
+      "id": "368005a0-4e75-428e-9688-6df38aa95f62",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr64rrfh003dmtbowp0j130f",
+        "phone": "0557456348",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:01:46.606Z"
+    },
+    {
+      "id": "4d265d76-c7ba-4c8e-bec0-ced67a97e199",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr64v8ua0005mtx4ena68fef",
+        "coordinates": {
+          "lat": 32.073,
+          "lng": 34.786
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1032",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T09:01:46.615Z"
+    },
+    {
+      "id": "2e90c98b-da03-473f-ade1-84a5bc69446f",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [
+          "IL433-1000",
+          "IL433-1018"
+        ]
+      },
+      "timestamp": "2026-07-04T09:01:46.620Z"
+    },
+    {
+      "id": "aa4406ee-b13a-493a-86a3-edae216f2a7f",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr64rrfh003dmtbowp0j130f",
+        "loraId": "IL433-1032",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T09:01:46.625Z"
+    },
+    {
+      "id": "6ce260ac-73b2-44bf-a072-9706a6fe0c90",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 2,
+        "meshtasticDelivered": 1
+      },
+      "timestamp": "2026-07-04T09:01:46.640Z"
+    },
+    {
+      "id": "37af0c1f-d0e8-4df5-b512-4d72d0109fc3",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T09:02:19.489Z"
+    },
+    {
+      "id": "157d313b-8a54-40cc-ae6b-1e41a0402b72",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:02:19.495Z"
+    },
+    {
+      "id": "7fce521b-313b-4dba-9247-2b9e8eb96058",
+      "incidentId": "cmr64v8ua0005mtx4ena68fef",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:02:30.897Z"
+    },
+    {
+      "id": "12565ed3-d349-41a9-803c-cdfe87cad55d",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "targetCount": 3
+      },
+      "timestamp": "2026-07-04T09:03:00.637Z"
+    },
+    {
+      "id": "33b56f1b-69d1-4672-aacc-3aeec064c48d",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "phone": "052556622",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:03:00.642Z"
+    },
+    {
+      "id": "091e71f8-8e45-4478-99c8-7d96a0140362",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "phone": "052556622",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:03:00.646Z"
+    },
+    {
+      "id": "ba29a8c4-76a3-41d5-bb61-0bcdacdc9a58",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr64rreh002zmtbovd5h2hoh",
+        "phone": "0554544193",
+        "volunteer": "נועה"
+      },
+      "timestamp": "2026-07-04T09:03:00.658Z"
+    },
+    {
+      "id": "6d61711f-7ca9-4889-8dbd-4af113f285e3",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr64rreh002zmtbovd5h2hoh",
+        "phone": "0554544193",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:03:00.662Z"
+    },
+    {
+      "id": "4f34cfad-ca13-4f24-933d-435ec0182618",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr64wu1p000amtx4q2453vqc",
+        "coordinates": {
+          "lat": 32.084407,
+          "lng": 34.799474
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1028",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T09:03:00.668Z"
+    },
+    {
+      "id": "7ef736ed-05af-4b86-bb26-d5b760276acc",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": [
+          "IL433-1000",
+          "IL433-1018"
+        ]
+      },
+      "timestamp": "2026-07-04T09:03:00.672Z"
+    },
+    {
+      "id": "ac778236-e8b8-4f40-b353-a2b51683d463",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr64rreh002zmtbovd5h2hoh",
+        "loraId": "IL433-1028",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T09:03:00.675Z"
+    },
+    {
+      "id": "83666aa2-4d1b-4839-8400-d2235f49b39a",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr64rr8g000vmtbo29j30i2j",
+        "phone": "0556742158",
+        "volunteer": "רוני"
+      },
+      "timestamp": "2026-07-04T09:03:00.688Z"
+    },
+    {
+      "id": "e228a557-893e-4294-b30e-dbe756ee2ae4",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr64rr8g000vmtbo29j30i2j",
+        "phone": "0556742158",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:03:00.691Z"
+    },
+    {
+      "id": "52178e49-040b-43d7-a52a-50233d70e522",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr64wu1p000amtx4q2453vqc",
+        "coordinates": {
+          "lat": 32.084407,
+          "lng": 34.799474
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1008",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T09:03:00.698Z"
+    },
+    {
+      "id": "b1c30da3-9f54-4cf2-a958-5e9079c30ebb",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 2,
+        "carriersUsed": [
+          "IL433-1018",
+          "IL433-1024"
+        ]
+      },
+      "timestamp": "2026-07-04T09:03:00.701Z"
+    },
+    {
+      "id": "f3f7a056-4bd2-467a-9969-19dfb9bfd450",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr64rr8g000vmtbo29j30i2j",
+        "loraId": "IL433-1008",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T09:03:00.704Z"
+    },
+    {
+      "id": "f91b986a-dc16-4261-9f65-62b1dd44b50d",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 3,
+        "meshtasticDelivered": 2
+      },
+      "timestamp": "2026-07-04T09:03:00.718Z"
+    },
+    {
+      "id": "e58fa053-f1e3-4267-b592-c9a3b21767db",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T09:03:27.044Z"
+    },
+    {
+      "id": "043dafbc-472a-461a-88f0-e097b8d69763",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:03:27.049Z"
+    },
+    {
+      "id": "59144d25-1322-4261-8660-3236f7eb868f",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:03:36.351Z"
+    },
+    {
+      "id": "7bcb9437-e3a6-4494-b1d9-83c66e0ee8c0",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr64u0z40003mtx4622r2aqi"
+      },
+      "timestamp": "2026-07-04T09:03:36.355Z"
+    },
+    {
+      "id": "e803b04e-0f07-46bb-9c34-26e96f80799b",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr64u0z40003mtx4622r2aqi",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:03:37.902Z"
+    },
+    {
+      "id": "177b23da-ff39-4180-a493-8d0b928464ea",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr64u0z40003mtx4622r2aqi"
+      },
+      "timestamp": "2026-07-04T09:03:37.906Z"
+    },
+    {
+      "id": "d51c49ec-5f0d-4f0e-8573-61f3d07078b1",
+      "incidentId": "cmr64wu1p000amtx4q2453vqc",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:03:47.967Z"
+    },
+    {
+      "id": "43697468-8136-44af-8591-a8625eec81ea",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "targetCount": 5
+      },
+      "timestamp": "2026-07-04T09:56:23.056Z"
+    },
+    {
+      "id": "fd40328f-5a54-4b01-b508-29ffa5dac74d",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "phone": "0525294723",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:56:23.072Z"
+    },
+    {
+      "id": "9533a643-7442-4370-9bb1-06bc4bdca131",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "phone": "0525294723",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:56:23.077Z"
+    },
+    {
+      "id": "78294e12-a735-4cf1-9945-54844d9541fd",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "phone": "0588643700",
+        "volunteer": "רוני"
+      },
+      "timestamp": "2026-07-04T09:56:23.094Z"
+    },
+    {
+      "id": "80e5803c-a50e-4451-8737-a2327c9f3ec7",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "phone": "0588643700",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:56:23.098Z"
+    },
+    {
+      "id": "38c59310-1840-4f2b-9bf7-b834466a521b",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+        "coordinates": {
+          "lat": 32.084407,
+          "lng": 34.799474
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1020",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T09:56:23.108Z"
+    },
+    {
+      "id": "814f559a-3d6e-44b8-909a-74e12456fbb3",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 1,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T09:56:23.113Z"
+    },
+    {
+      "id": "bdf34ce1-b633-42d6-8813-59289e0c692d",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "loraId": "IL433-1020",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T09:56:23.119Z"
+    },
+    {
+      "id": "80b63a5f-e35d-4450-85bf-cb1cc82d0b24",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "phone": "0591237060",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T09:56:23.133Z"
+    },
+    {
+      "id": "79ca518d-83df-4e40-9732-2f8328f866d4",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "phone": "0591237060",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:56:23.137Z"
+    },
+    {
+      "id": "2aa3f087-71cf-4889-91a6-22a19ea13144",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+        "coordinates": {
+          "lat": 32.084407,
+          "lng": 34.799474
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1014",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T09:56:23.145Z"
+    },
+    {
+      "id": "20f90683-69c4-4d34-95e8-31bbb0361f67",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T09:56:23.148Z"
+    },
+    {
+      "id": "4bd6c1d2-1136-439b-8afc-2701319a5602",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "loraId": "IL433-1014",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T09:56:23.152Z"
+    },
+    {
+      "id": "3203129b-cd43-455f-a271-be54d7001f4f",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+        "phone": "0544063632",
+        "volunteer": "ליאור"
+      },
+      "timestamp": "2026-07-04T09:56:23.166Z"
+    },
+    {
+      "id": "2ffc9c39-30f3-4e63-9b05-818612b0162d",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+        "phone": "0544063632",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:56:23.169Z"
+    },
+    {
+      "id": "38e8ee7c-0882-4d7b-a74b-7373491d85ed",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "phone": "0583062944",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T09:56:23.183Z"
+    },
+    {
+      "id": "855bc6d1-122d-4861-a9d6-812e531f104f",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "phone": "0583062944",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T09:56:23.186Z"
+    },
+    {
+      "id": "62f7cf63-7fdf-4e2c-8dc3-f68f571888fc",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+        "coordinates": {
+          "lat": 32.084407,
+          "lng": 34.799474
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1026",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T09:56:23.193Z"
+    },
+    {
+      "id": "af08aba8-14a6-49b3-8820-af870a0682e4",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T09:56:23.196Z"
+    },
+    {
+      "id": "c2490f24-4905-4b8b-a012-93bc7c10c52d",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "loraId": "IL433-1026",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T09:56:23.199Z"
+    },
+    {
+      "id": "77d7efe8-68a6-4571-b021-0ca9329192de",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 5,
+        "meshtasticDelivered": 3
+      },
+      "timestamp": "2026-07-04T09:56:23.212Z"
+    },
+    {
+      "id": "d2504fbd-ec9a-4737-8de6-12588579d7b3",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T09:56:42.233Z"
+    },
+    {
+      "id": "cb47cef6-610d-43c3-a5bf-57ea551e1724",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:56:42.238Z"
+    },
+    {
+      "id": "4da0c25b-c195-46e0-8bd3-70bfc101c7a4",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:56:49.997Z"
+    },
+    {
+      "id": "34cd4f9b-1e85-4860-aa2c-6885958b3bca",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml"
+      },
+      "timestamp": "2026-07-04T09:56:50.002Z"
+    },
+    {
+      "id": "64efd766-0e97-4757-92d3-1c504cec20d3",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:56:55.657Z"
+    },
+    {
+      "id": "876e9e4f-5d92-4580-8dd4-597501557a58",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "דור",
+        "closureReason": "PATIENT_RESPONDING",
+        "note": "בדיקה"
+      },
+      "timestamp": "2026-07-04T09:57:24.008Z"
+    },
+    {
+      "id": "9ed2ef2b-ca4b-422a-bdb1-b099752509c8",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:57:51.892Z"
+    },
+    {
+      "id": "5cac54e7-453f-4d4f-8a37-4d9c39fcba4b",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml"
+      },
+      "timestamp": "2026-07-04T09:57:51.897Z"
+    },
+    {
+      "id": "1601a2cc-f37f-4a3d-b0a2-83fbfd472615",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:57:52.586Z"
+    },
+    {
+      "id": "5c1cc266-53e7-42e3-acad-0837435a078a",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml"
+      },
+      "timestamp": "2026-07-04T09:57:52.589Z"
+    },
+    {
+      "id": "d5aad5f3-1ff5-434a-94aa-8b1d68f1026b",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:57:53.046Z"
+    },
+    {
+      "id": "afea8601-63e8-494e-ab5f-8d568c5a82c8",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml"
+      },
+      "timestamp": "2026-07-04T09:57:53.049Z"
+    },
+    {
+      "id": "2c47f9fa-aac2-4f7f-827b-aa17c6b645c3",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:57:53.216Z"
+    },
+    {
+      "id": "9b9b30d3-6e14-4047-bc12-89bfd0a2f5a6",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml"
+      },
+      "timestamp": "2026-07-04T09:57:53.220Z"
+    },
+    {
+      "id": "e65fe90e-25ce-46dc-9441-afe719e5364f",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:58:07.936Z"
+    },
+    {
+      "id": "dba1448c-8f1a-420d-b710-fba094a469b2",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml"
+      },
+      "timestamp": "2026-07-04T09:58:07.940Z"
+    },
+    {
+      "id": "93c8901d-ee14-439b-9fe8-d05778e3581c",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T09:58:08.772Z"
+    },
+    {
+      "id": "45bdbc46-9623-48aa-a46c-e7864e433ae7",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr66spdv0005mt5824mwymml"
+      },
+      "timestamp": "2026-07-04T09:58:08.776Z"
+    },
+    {
+      "id": "c498830f-00d1-4475-beda-7aef9c982328",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "volunteer": "רוני"
+      },
+      "timestamp": "2026-07-04T09:58:10.204Z"
+    },
+    {
+      "id": "8dc345fd-fc71-41e8-b8b1-69fb2b49c99b",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "רוני",
+        "deviceId": "cmr66ngha0024mts00jtidrk6"
+      },
+      "timestamp": "2026-07-04T09:58:10.207Z"
+    },
+    {
+      "id": "f3fd922f-6360-431d-8ab2-4c6fbddb488e",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "volunteer": "רוני"
+      },
+      "timestamp": "2026-07-04T09:58:10.784Z"
+    },
+    {
+      "id": "8a54b077-7bfc-401b-ab41-fd72430e07a9",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "רוני",
+        "deviceId": "cmr66ngha0024mts00jtidrk6"
+      },
+      "timestamp": "2026-07-04T09:58:10.787Z"
+    },
+    {
+      "id": "981a4d1e-f297-452a-a668-1cd94fd5b9bc",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T09:58:12.150Z"
+    },
+    {
+      "id": "964dcc19-e950-4f9f-bcbd-7eba5ecd9afb",
+      "incidentId": "cmr66tgzq0006mt58k0vam3jb",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "מיכל",
+        "deviceId": "cmr66ngfm001imts0ohzl9abv"
+      },
+      "timestamp": "2026-07-04T09:58:12.154Z"
+    },
+    {
+      "id": "b4258a52-b8f7-4232-b1fb-7f3a312383b0",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "targetCount": 5
+      },
+      "timestamp": "2026-07-04T10:00:30.175Z"
+    },
+    {
+      "id": "913e7aa1-e7d1-4a80-b4a5-41538a3f2726",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "phone": "0525294723",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T10:00:30.180Z"
+    },
+    {
+      "id": "9f49d85c-6bfe-4865-ad9c-1714612fc420",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "phone": "0525294723",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:30.183Z"
+    },
+    {
+      "id": "0355a719-b72e-4cbf-87a2-2bd6211c1e5f",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngpw0057mts050xd2snh",
+        "phone": "0556739847",
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:00:30.196Z"
+    },
+    {
+      "id": "a0b840f2-5ba5-49fc-a24f-a9ea0c51ae0c",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngpw0057mts050xd2snh",
+        "phone": "0556739847",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:30.200Z"
+    },
+    {
+      "id": "30d71a9a-81cf-4889-b0cb-24587e19a9f2",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "phone": "0591237060",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T10:00:30.214Z"
+    },
+    {
+      "id": "21db1809-ac0c-42f2-81e0-608ae0393e35",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "phone": "0591237060",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:30.217Z"
+    },
+    {
+      "id": "99461d56-1f85-4404-aec5-239ed45c2d62",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+        "coordinates": {
+          "lat": 32.073,
+          "lng": 34.786
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1014",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:00:30.225Z"
+    },
+    {
+      "id": "650c664c-9bd3-4c76-80f8-fa73cfa37b21",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T10:00:30.228Z"
+    },
+    {
+      "id": "4df35986-3727-44b7-bac7-e7ba8dfccbb3",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "loraId": "IL433-1014",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:00:30.232Z"
+    },
+    {
+      "id": "7eac23b6-5722-4807-be6b-5805f4e1e917",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+        "phone": "0544063632",
+        "volunteer": "ליאור"
+      },
+      "timestamp": "2026-07-04T10:00:30.245Z"
+    },
+    {
+      "id": "2c76fd5b-2597-4601-9441-0db5630963f5",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+        "phone": "0544063632",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:30.249Z"
+    },
+    {
+      "id": "11bc67ab-c32c-44c9-829b-30cc35f9cd66",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "phone": "0583062944",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T10:00:30.262Z"
+    },
+    {
+      "id": "5b0494ba-d659-4c39-a204-f4deb7f3f92d",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "phone": "0583062944",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:30.266Z"
+    },
+    {
+      "id": "9bee5842-5ebe-4cb4-a27c-b07284aba6d7",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+        "coordinates": {
+          "lat": 32.073,
+          "lng": 34.786
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1026",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:00:30.274Z"
+    },
+    {
+      "id": "7423bade-9dfb-4729-80a3-05d9fe0ce635",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T10:00:30.278Z"
+    },
+    {
+      "id": "333680ee-7bb1-4a83-8cac-227aa236e603",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "loraId": "IL433-1026",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:00:30.281Z"
+    },
+    {
+      "id": "b725da1c-51ec-4014-b07e-38dedc27632e",
+      "incidentId": "cmr66yrq4000hmt58qxp1xz5g",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 5,
+        "meshtasticDelivered": 2
+      },
+      "timestamp": "2026-07-04T10:00:30.296Z"
+    },
+    {
+      "id": "f2fe421f-1712-4e05-8bb5-8dbc25b08d14",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "targetCount": 5
+      },
+      "timestamp": "2026-07-04T10:00:33.998Z"
+    },
+    {
+      "id": "5f53acda-0840-4802-a900-1e1a1c1c9bda",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "phone": "0525294723",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T10:00:34.004Z"
+    },
+    {
+      "id": "bd053e28-206c-434e-b06f-7ee5602e60ad",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66spdv0005mt5824mwymml",
+        "phone": "0525294723",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:34.008Z"
+    },
+    {
+      "id": "5c75667c-1a2c-4c27-b9fe-0307a5afc19c",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngpw0057mts050xd2snh",
+        "phone": "0556739847",
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:00:34.022Z"
+    },
+    {
+      "id": "13fdf234-b483-41c3-9c5c-c0727b29d820",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngpw0057mts050xd2snh",
+        "phone": "0556739847",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:34.026Z"
+    },
+    {
+      "id": "b821714b-25cb-4496-84b3-f3f17a82a87f",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "phone": "0591237060",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T10:00:34.039Z"
+    },
+    {
+      "id": "024961ae-8993-490c-91ab-8dcc39f49c72",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "phone": "0591237060",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:34.042Z"
+    },
+    {
+      "id": "78301fda-3883-4e0a-ae53-20280293e5b6",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66yuoa000smt58jwvvsltr",
+        "coordinates": {
+          "lat": 32.073,
+          "lng": 34.786
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1014",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:00:34.049Z"
+    },
+    {
+      "id": "5b4ffa4c-034f-40cc-afe9-e30adcc7acc2",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T10:00:34.054Z"
+    },
+    {
+      "id": "d6b00262-e7ef-443d-81c6-5ef351e3a20f",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngfm001imts0ohzl9abv",
+        "loraId": "IL433-1014",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:00:34.060Z"
+    },
+    {
+      "id": "a6a6f4ed-4ca8-4b7b-a100-e79f8ac3ef87",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+        "phone": "0544063632",
+        "volunteer": "ליאור"
+      },
+      "timestamp": "2026-07-04T10:00:34.074Z"
+    },
+    {
+      "id": "4fa431c2-6cdb-485c-9ea3-61392292a0d1",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngo9004lmts0cdks3tn8",
+        "phone": "0544063632",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:34.077Z"
+    },
+    {
+      "id": "c8987e31-5516-411e-ade8-b8ba123ca742",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "phone": "0583062944",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T10:00:34.090Z"
+    },
+    {
+      "id": "563a5e0b-5de0-49ac-b26d-76f0ea4600ca",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "phone": "0583062944",
+        "message": "חירום AED: דום לב ב-32.0730, 34.7860. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:34.093Z"
+    },
+    {
+      "id": "bf0ed940-aca4-4f0e-87de-3c9edd2f702a",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66yuoa000smt58jwvvsltr",
+        "coordinates": {
+          "lat": 32.073,
+          "lng": 34.786
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1026",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:00:34.101Z"
+    },
+    {
+      "id": "8f8f69d7-aec3-445d-afd8-1f27df6eeb7d",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T10:00:34.106Z"
+    },
+    {
+      "id": "997b1319-6680-4e2b-8038-0c8b0e262eea",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngj3002rmts02mo3ahwr",
+        "loraId": "IL433-1026",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:00:34.109Z"
+    },
+    {
+      "id": "b863b373-fd06-4b22-8477-8b50715b15f1",
+      "incidentId": "cmr66yuoa000smt58jwvvsltr",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 5,
+        "meshtasticDelivered": 2
+      },
+      "timestamp": "2026-07-04T10:00:34.125Z"
+    },
+    {
+      "id": "2fcb2eab-96ca-48eb-9e7e-7af2610a7456",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.081411,
+        "lng": 34.852066,
+        "targetCount": 2
+      },
+      "timestamp": "2026-07-04T10:00:36.377Z"
+    },
+    {
+      "id": "1473e7e9-11ce-4593-8a39-ca11da86b854",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "phone": "0588643700",
+        "volunteer": "רוני"
+      },
+      "timestamp": "2026-07-04T10:00:36.381Z"
+    },
+    {
+      "id": "7414437e-9dfa-4011-9234-3ef9f4689597",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "phone": "0588643700",
+        "message": "חירום AED: דום לב ב-32.0814, 34.8521. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:36.386Z"
+    },
+    {
+      "id": "ebc3c577-5edc-494f-8fd6-215b6cbcb59b",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66ywie0013mt58l97av6s6",
+        "coordinates": {
+          "lat": 32.081411,
+          "lng": 34.852066
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1020",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:00:36.393Z"
+    },
+    {
+      "id": "48223e5d-6762-49f6-a0bd-1eefa5b8780c",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-NORTH",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T10:00:36.397Z"
+    },
+    {
+      "id": "58f2e8e8-58c8-4d0f-a477-cfc68320d012",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "loraId": "IL433-1020",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:00:36.401Z"
+    },
+    {
+      "id": "8b586485-3904-4c70-977b-5906beff0cc5",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr66ngmm0041mts0dk088qvx",
+        "phone": "0573794816",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T10:00:36.416Z"
+    },
+    {
+      "id": "bda338c9-87d5-4f01-b0f1-bc0d0d0b2260",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr66ngmm0041mts0dk088qvx",
+        "phone": "0573794816",
+        "message": "חירום AED: דום לב ב-32.0814, 34.8521. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:00:36.421Z"
+    },
+    {
+      "id": "ae889961-6b71-4e17-8b61-8282976b89d1",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr66ywie0013mt58l97av6s6",
+        "coordinates": {
+          "lat": 32.081411,
+          "lng": 34.852066
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1038",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:00:36.428Z"
+    },
+    {
+      "id": "ab1b5c98-b2e8-49ba-adb7-5c198b8af537",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-NORTH",
+        "meshHops": 1,
+        "carriersUsed": [
+          "IL433-1006"
+        ]
+      },
+      "timestamp": "2026-07-04T10:00:36.431Z"
+    },
+    {
+      "id": "fc0ce4e9-dc12-4e48-af74-285c04d87fd6",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr66ngmm0041mts0dk088qvx",
+        "loraId": "IL433-1038",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:00:36.436Z"
+    },
+    {
+      "id": "252343f6-2ec4-4a08-ac28-54b716e4da5c",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 2,
+        "meshtasticDelivered": 2
+      },
+      "timestamp": "2026-07-04T10:00:36.449Z"
+    },
+    {
+      "id": "874340a2-6a4d-4158-b2e0-97101cf9ce89",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66ngha0024mts00jtidrk6",
+        "volunteer": "רוני"
+      },
+      "timestamp": "2026-07-04T10:00:45.297Z"
+    },
+    {
+      "id": "72db90a2-38aa-44bd-a1bc-cd4326aef7a8",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "רוני",
+        "deviceId": "cmr66ngha0024mts00jtidrk6"
+      },
+      "timestamp": "2026-07-04T10:00:45.304Z"
+    },
+    {
+      "id": "c0ea61c5-f4b9-4181-a489-5367e954ce31",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "deviceId": "cmr66ngmm0041mts0dk088qvx",
+        "volunteer": "מיכל"
+      },
+      "timestamp": "2026-07-04T10:00:47.357Z"
+    },
+    {
+      "id": "eccac959-0685-4881-8b06-eed0fe1b0c17",
+      "incidentId": "cmr66ywie0013mt58l97av6s6",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "מיכל",
+        "deviceId": "cmr66ngmm0041mts0dk088qvx"
+      },
+      "timestamp": "2026-07-04T10:00:47.360Z"
+    },
+    {
+      "id": "32b8a8de-510f-4cf6-9892-f055d022454a",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "targetCount": 2
+      },
+      "timestamp": "2026-07-04T10:11:48.481Z"
+    },
+    {
+      "id": "86cffe54-8741-4322-9836-7a48292d52ab",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "phone": "0593677281",
+        "volunteer": "מאיה"
+      },
+      "timestamp": "2026-07-04T10:11:48.495Z"
+    },
+    {
+      "id": "8410563e-0abb-4b2c-941b-0ebea5349ee3",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "phone": "0593677281",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:11:48.501Z"
+    },
+    {
+      "id": "3d0eeefc-a959-4c57-874b-0fa3b77ef4e8",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+        "coordinates": {
+          "lat": 32.084407,
+          "lng": 34.799474
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1010",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:11:48.514Z"
+    },
+    {
+      "id": "8b1339df-7a69-45e1-b1b2-3ad3971f412a",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-CENTER",
+        "meshHops": 1,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T10:11:48.519Z"
+    },
+    {
+      "id": "2182c7da-de19-4071-99db-6b1034cb53d2",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "loraId": "IL433-1010",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:11:48.524Z"
+    },
+    {
+      "id": "53dc0502-b6b8-4ef3-8a7f-addba2243d88",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr67bqww003jmtkoldsp3hu9",
+        "phone": "0572859271",
+        "volunteer": "דניאל"
+      },
+      "timestamp": "2026-07-04T10:11:48.543Z"
+    },
+    {
+      "id": "b410ce9c-6eb6-458d-bdf0-69a2cf8c3f3d",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr67bqww003jmtkoldsp3hu9",
+        "phone": "0572859271",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:11:48.551Z"
+    },
+    {
+      "id": "5953741e-7e30-4505-a9c5-a4eb1b42e6f3",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 2,
+        "meshtasticDelivered": 1
+      },
+      "timestamp": "2026-07-04T10:11:48.565Z"
+    },
+    {
+      "id": "656361de-b524-4028-9dde-4a62830e1e35",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "מאיה",
+        "lat": 32.1084902677155,
+        "lng": 34.82131160169411,
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv"
+      },
+      "timestamp": "2026-07-04T10:12:22.908Z"
+    },
+    {
+      "id": "5048c369-c619-4de5-a808-8794e0939698",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "מאיה",
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T10:12:30.787Z"
+    },
+    {
+      "id": "32bc10a9-1ce5-41ab-80b1-d06d48ee7437",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "מאיה"
+      },
+      "timestamp": "2026-07-04T10:12:30.792Z"
+    },
+    {
+      "id": "8a84d8e4-5082-4847-a5d0-60e2b07c32e4",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "מאיה",
+        "lat": 32.1084902677155,
+        "lng": 34.82131160169411,
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv"
+      },
+      "timestamp": "2026-07-04T10:12:30.810Z"
+    },
+    {
+      "id": "22974cbc-009e-4983-829f-7a2e9513cde1",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "מאיה",
+        "lat": 32.104155279526715,
+        "lng": 34.81738083338917,
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv"
+      },
+      "timestamp": "2026-07-04T10:12:30.822Z"
+    },
+    {
+      "id": "4ae90b8b-2905-45de-b667-ce751bfa8314",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "מאיה",
+        "lat": 32.10060058921191,
+        "lng": 34.81415760337912,
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv"
+      },
+      "timestamp": "2026-07-04T10:13:30.838Z"
+    },
+    {
+      "id": "385532c5-52de-4a09-9115-1d02ae1ce43a",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "מאיה"
+      },
+      "timestamp": "2026-07-04T10:13:41.130Z"
+    },
+    {
+      "id": "9eec9207-2348-4fc1-a52b-71bdd92b4bad",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "מאיה",
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv"
+      },
+      "timestamp": "2026-07-04T10:13:41.147Z"
+    },
+    {
+      "id": "9192bf92-76f1-4ebd-93e3-55df16c9093e",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "מאיה",
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv"
+      },
+      "timestamp": "2026-07-04T10:13:41.162Z"
+    },
+    {
+      "id": "54c580f7-1c9a-4e14-b36d-9d6ec03ff271",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "מאיה",
+        "closureReason": "PATIENT_RESPONDING",
+        "note": "יפה מאד"
+      },
+      "timestamp": "2026-07-04T10:14:03.143Z"
+    },
+    {
+      "id": "6d6a6868-323f-47e7-ac42-cecca10aba29",
+      "incidentId": "cmr67db1z0001mtqs96k8w9vm",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "מאיה",
+        "lat": 32.1084902677155,
+        "lng": 34.82131160169411,
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv"
+      },
+      "timestamp": "2026-07-04T10:14:03.162Z"
+    },
+    {
+      "id": "b2e4f519-5517-43d3-be1b-94b76c4bae4d",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.102898,
+        "lng": 34.790332,
+        "targetCount": 2
+      },
+      "timestamp": "2026-07-04T10:14:34.591Z"
+    },
+    {
+      "id": "de5fb87a-e3b7-4c69-b564-50020e8fba5a",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "phone": "0593677281",
+        "volunteer": "מאיה"
+      },
+      "timestamp": "2026-07-04T10:14:34.596Z"
+    },
+    {
+      "id": "85e47a56-3b8f-42e7-b191-a261add0dd9e",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "phone": "0593677281",
+        "message": "חירום AED: דום לב ב-32.1029, 34.7903. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:14:34.600Z"
+    },
+    {
+      "id": "4b793463-b3d7-4cfa-83fb-0a1fa1ad0be4",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "MESHTASTIC_DOWNLINK",
+      "payload": {
+        "protocol": "Meshtastic",
+        "frequencyMhz": 433,
+        "encryption": "AES-256",
+        "messageType": "EMERGENCY_AED_REQUEST",
+        "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+        "coordinates": {
+          "lat": 32.102898,
+          "lng": 34.790332
+        },
+        "channel": "emergency-mesh",
+        "targetLoraId": "IL433-1010",
+        "encrypted": true
+      },
+      "timestamp": "2026-07-04T10:14:34.609Z"
+    },
+    {
+      "id": "221eb122-ec68-4f59-9755-8d90a04c9869",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "GATEWAY_REACHED",
+      "payload": {
+        "gatewayLoraId": "GW-433-NORTH",
+        "meshHops": 0,
+        "carriersUsed": []
+      },
+      "timestamp": "2026-07-04T10:14:34.613Z"
+    },
+    {
+      "id": "66717ccf-a375-4bfb-9a5b-eacba04d97f3",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "DEVICE_BEEPING",
+      "payload": {
+        "deviceId": "cmr67bqpw0014mtkoj5yzg2xv",
+        "loraId": "IL433-1010",
+        "state": "BEEPING",
+        "viaBluetooth": "Phone receives alert via Meshtastic BT bridge"
+      },
+      "timestamp": "2026-07-04T10:14:34.617Z"
+    },
+    {
+      "id": "afb5b8ce-86f9-4647-abeb-4a008d153e28",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr67bqww003jmtkoldsp3hu9",
+        "phone": "0572859271",
+        "volunteer": "דניאל"
+      },
+      "timestamp": "2026-07-04T10:14:34.633Z"
+    },
+    {
+      "id": "7cb3b3c0-a280-4518-98f4-edfb5f45e83f",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr67bqww003jmtkoldsp3hu9",
+        "phone": "0572859271",
+        "message": "חירום AED: דום לב ב-32.1029, 34.7903. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:14:34.638Z"
+    },
+    {
+      "id": "bfe82fdf-5372-4401-a2a6-2ba04ec0fb92",
+      "incidentId": "cmr67gvaa0006mtqsy1gtau6p",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 2,
+        "meshtasticDelivered": 1
+      },
+      "timestamp": "2026-07-04T10:14:34.653Z"
+    },
+    {
+      "id": "14ad4196-8b8a-4483-b2ed-862e739894f5",
+      "incidentId": "cmr67z2y80004mtqstd523o70",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "targetCount": 0
+      },
+      "timestamp": "2026-07-04T10:28:44.409Z"
+    },
+    {
+      "id": "cfbefc36-4c1a-449c-bfcb-b8492f8b600b",
+      "incidentId": "cmr67z2y80004mtqstd523o70",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 0,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T10:28:44.423Z"
+    },
+    {
+      "id": "756dbc40-a8c6-4f20-baa4-aabb7cea83b0",
+      "incidentId": "cmr686umd0000mtb4d82qe0nu",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.073,
+        "lng": 34.786,
+        "targetCount": 0
+      },
+      "timestamp": "2026-07-04T10:34:46.831Z"
+    },
+    {
+      "id": "bff37e49-c5e1-4474-b7d9-fe530f9103c8",
+      "incidentId": "cmr686umd0000mtb4d82qe0nu",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 0,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T10:34:46.843Z"
+    },
+    {
+      "id": "0e8dc6e9-baee-4209-a2f8-27bd2dbf2a3e",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.084407,
+        "lng": 34.799474,
+        "targetCount": 1
+      },
+      "timestamp": "2026-07-04T10:43:41.137Z"
+    },
+    {
+      "id": "d2084111-df09-403a-8feb-fc7a9b726f0f",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "phone": "0513719924",
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:43:41.153Z"
+    },
+    {
+      "id": "2a4fa77c-e79e-487f-811b-230ec9e02ab4",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "phone": "0513719924",
+        "message": "חירום AED: דום לב ב-32.0844, 34.7995. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:43:41.159Z"
+    },
+    {
+      "id": "ec2e75dd-5db1-446e-8b25-13d9455c014d",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 1,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T10:43:41.177Z"
+    },
+    {
+      "id": "f1d32d34-eac9-4c2f-95b4-0bd31809d58e",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.0830339,
+        "lng": 34.8013487,
+        "source": "manual",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:44:22.832Z"
+    },
+    {
+      "id": "26d4207c-b4df-4286-849b-5fa8585560e8",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.0837374,
+        "lng": 34.8008775,
+        "source": "manual",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:44:41.585Z"
+    },
+    {
+      "id": "d8d1d8eb-69e2-4fa3-b508-a52fb6455765",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.0837374,
+        "lng": 34.8008775,
+        "source": "manual",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:44:44.683Z"
+    },
+    {
+      "id": "90ff7aaa-cd5c-430f-9209-93909bd89969",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.0837374,
+        "lng": 34.8008775,
+        "source": "manual",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:44:45.764Z"
+    },
+    {
+      "id": "e0cb2817-27b1-46cd-98f4-fd5099eaa5d8",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02532901573948,
+        "lng": 34.77767002743736,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:44:57.583Z"
+    },
+    {
+      "id": "15899ae1-5f4d-4e08-b535-246912580547",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.0837374,
+        "lng": 34.8008775,
+        "source": "manual",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:45:04.858Z"
+    },
+    {
+      "id": "a5bb4974-9e85-458e-928e-5bce5a2fcdc4",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02532901573948,
+        "lng": 34.77767002743736,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:45:17.037Z"
+    },
+    {
+      "id": "8a7200a3-e102-4c25-9dcf-a0fa28585585",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "אור",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T10:45:17.060Z"
+    },
+    {
+      "id": "689295ac-3b58-4154-be52-8ba1e56ad3c0",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:45:17.066Z"
+    },
+    {
+      "id": "06d8ecdb-0169-4a45-9d9c-b89946e29274",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02532901573948,
+        "lng": 34.77767002743736,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:45:17.088Z"
+    },
+    {
+      "id": "5e4fae62-4ce2-4d79-8e00-c670d133c713",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02532901573948,
+        "lng": 34.77767002743736,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:45:50.148Z"
+    },
+    {
+      "id": "6c2f00f7-8409-415f-b5c9-44295c4d4424",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:45:50.171Z"
+    },
+    {
+      "id": "4fc154e4-bf56-4644-ab9b-256c8a7deab2",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02532901573948,
+        "lng": 34.77767002743736,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:45:50.194Z"
+    },
+    {
+      "id": "f35cdfc5-443f-403e-b930-1f018cf9f425",
+      "incidentId": "cmr68iavc0001mtd080ody0fv",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "אור",
+        "closureReason": "PATIENT_RESPONDING",
+        "note": null
+      },
+      "timestamp": "2026-07-04T10:46:00.102Z"
+    },
+    {
+      "id": "9639a0a1-4109-47f5-bf40-dd038f23d912",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.025791,
+        "lng": 34.777612,
+        "targetCount": 1
+      },
+      "timestamp": "2026-07-04T10:47:51.972Z"
+    },
+    {
+      "id": "90f48a23-7615-418c-9f54-14068fcff536",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "phone": "0513719924",
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:47:51.978Z"
+    },
+    {
+      "id": "7fb56381-b969-41c4-9581-f123a1267b50",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "phone": "0513719924",
+        "message": "חירום AED: דום לב ב-32.0258, 34.7776. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:47:51.982Z"
+    },
+    {
+      "id": "8d7dcee5-47a4-4ed9-87d3-46765e48ddf3",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 1,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T10:47:51.998Z"
+    },
+    {
+      "id": "45aacb5a-9cd1-423b-a6dc-98fa7509c4a6",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.025347592224,
+        "lng": 34.77760463831838,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:48:05.163Z"
+    },
+    {
+      "id": "35d79ad4-e033-483b-b3d3-ca16a45ac666",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.025347592224,
+        "lng": 34.77760463831838,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:48:05.177Z"
+    },
+    {
+      "id": "11de9011-18a4-4e0c-b4cf-70daf01dda97",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "אור",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T10:48:05.188Z"
+    },
+    {
+      "id": "47beeb2f-794b-4436-9504-e80f0411f5d9",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:48:05.194Z"
+    },
+    {
+      "id": "d48c5822-88bf-4c45-bf9d-0107605434e7",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.025347592224,
+        "lng": 34.77760463831838,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:48:05.220Z"
+    },
+    {
+      "id": "5af75bc0-84c0-4a55-9bb5-67210ae823aa",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02536286696008,
+        "lng": 34.777519997484376,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:49:09.700Z"
+    },
+    {
+      "id": "91b42705-be0a-4998-acf2-8e8403d4a464",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02536286696008,
+        "lng": 34.777519997484376,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:49:45.470Z"
+    },
+    {
+      "id": "88f8106b-2dbe-4ba5-8602-368010602eeb",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:49:45.493Z"
+    },
+    {
+      "id": "21fae77a-bff8-459d-ba6b-54557166452f",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02536286696008,
+        "lng": 34.777519997484376,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:49:45.516Z"
+    },
+    {
+      "id": "2e1b8353-8a8a-43ef-8d17-b59612759022",
+      "incidentId": "cmr68noh10004mtd01zshqmj4",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "אור",
+        "closureReason": "AMBULANCE_ORDERED",
+        "note": null
+      },
+      "timestamp": "2026-07-04T10:49:57.780Z"
+    },
+    {
+      "id": "27ac1fb2-9d75-47e1-aac1-e269ce064bde",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.019284,
+        "lng": 34.774733,
+        "targetCount": 1
+      },
+      "timestamp": "2026-07-04T10:50:15.755Z"
+    },
+    {
+      "id": "9301caea-82e0-43f5-bbfe-18608fca199f",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "phone": "0513719924",
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:50:15.761Z"
+    },
+    {
+      "id": "e6f3b1d6-08cf-4332-8506-9b6d4826b621",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "phone": "0513719924",
+        "message": "חירום AED: דום לב ב-32.0193, 34.7747. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:50:15.765Z"
+    },
+    {
+      "id": "e4a09cb3-9d2d-4ecb-b8de-6ef9c018090f",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 1,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T10:50:15.780Z"
+    },
+    {
+      "id": "3ce5cf0a-4756-4cf0-a424-b90ec74661d3",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02539553729647,
+        "lng": 34.77736581329624,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:50:25.109Z"
+    },
+    {
+      "id": "58577c76-d662-43cf-88d1-6c04a9eaae0e",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "אור",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T10:50:25.133Z"
+    },
+    {
+      "id": "4d2e7b86-196d-4653-8a49-8e4b0663a617",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:50:25.138Z"
+    },
+    {
+      "id": "c336a0f9-a217-4e65-93ec-bf517209b110",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02539553729647,
+        "lng": 34.77736581329624,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:50:25.164Z"
+    },
+    {
+      "id": "f19d6eca-41bf-48f2-948c-a6d9ccaa2527",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02539553729647,
+        "lng": 34.77736581329624,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:50:29.983Z"
+    },
+    {
+      "id": "0edcfda1-ce39-4c52-94f8-abc957418f9d",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "אור"
+      },
+      "timestamp": "2026-07-04T10:50:30.007Z"
+    },
+    {
+      "id": "8e51bd9f-3585-48fe-aabe-0e6c9ff26aee",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "אור",
+        "lat": 32.02539553729647,
+        "lng": 34.77736581329624,
+        "source": "gps",
+        "deviceId": "cmr68fqq50052mtkgs7j95dep"
+      },
+      "timestamp": "2026-07-04T10:50:30.030Z"
+    },
+    {
+      "id": "fcfd89a4-7aac-4c3f-99df-0b7dff0ac833",
+      "incidentId": "cmr68qrex0007mtd0m06f1iur",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "אור",
+        "closureReason": "AMBULANCE_ORDERED",
+        "note": null
+      },
+      "timestamp": "2026-07-04T10:50:35.450Z"
+    },
+    {
+      "id": "2599b798-5b1a-4eb1-8508-bc86be74e5c7",
+      "incidentId": "cmr692fci0004mt785x8axlex",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.032527,
+        "lng": 34.7616,
+        "targetCount": 1
+      },
+      "timestamp": "2026-07-04T10:59:20.060Z"
+    },
+    {
+      "id": "bdadea82-4428-4133-914e-2f603c76b689",
+      "incidentId": "cmr692fci0004mt785x8axlex",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T10:59:20.076Z"
+    },
+    {
+      "id": "b92f9633-2412-4472-8ea0-f0edefb097e6",
+      "incidentId": "cmr692fci0004mt785x8axlex",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "message": "חירום AED: דום לב ב-32.0325, 34.7616. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:59:20.084Z"
+    },
+    {
+      "id": "f93bc80e-af6a-4490-b2b6-f4633e71f4a5",
+      "incidentId": "cmr692fci0004mt785x8axlex",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 1,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T10:59:20.103Z"
+    },
+    {
+      "id": "aa06ac8f-08eb-4972-bcac-acd4bb4d585d",
+      "incidentId": "cmr692fci0004mt785x8axlex",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "admin",
+        "closureReason": "OTHER",
+        "note": null,
+        "closedBy": "admin"
+      },
+      "timestamp": "2026-07-04T10:59:34.906Z"
+    },
+    {
+      "id": "735bae87-8330-4614-a39a-6cce030d9fc9",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.023796,
+        "lng": 34.76263,
+        "targetCount": 1
+      },
+      "timestamp": "2026-07-04T10:59:48.674Z"
+    },
+    {
+      "id": "e3a0f89e-bdf1-44e3-8f9b-09b6afcc4017",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T10:59:48.680Z"
+    },
+    {
+      "id": "6e77db49-20c9-4a66-9aaf-4590ade31ae1",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "message": "חירום AED: דום לב ב-32.0238, 34.7626. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T10:59:48.686Z"
+    },
+    {
+      "id": "56d2568d-c38f-4447-96ba-5d0016899993",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 1,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T10:59:48.705Z"
+    },
+    {
+      "id": "dd627462-52a7-4728-b7cf-3de8d05e8dfc",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025371381499816,
+        "lng": 34.77737046896831,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:00:07.050Z"
+    },
+    {
+      "id": "910ba750-c898-4bfa-9404-5a08ea7bb96e",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T11:00:07.073Z"
+    },
+    {
+      "id": "0ca9513c-cd4c-4c0e-8ecd-6e81d059b8e1",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T11:00:07.078Z"
+    },
+    {
+      "id": "23a8a52f-9ff8-4e11-bc28-1da8ae339184",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025371381499816,
+        "lng": 34.77737046896831,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:00:07.102Z"
+    },
+    {
+      "id": "0b0094b2-b3fc-4dda-a4c9-4e909384f396",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025366598265954,
+        "lng": 34.77737283196869,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:00:24.936Z"
+    },
+    {
+      "id": "3ee58dd9-d215-437c-b259-bdd06031f335",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T11:00:24.959Z"
+    },
+    {
+      "id": "6c8d9dc1-c158-4b47-92b5-e0f5d6ca645b",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025366598265954,
+        "lng": 34.77737283196869,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:00:24.985Z"
+    },
+    {
+      "id": "99a1e3f0-368f-4cfd-9ddf-f8c6120a18fd",
+      "incidentId": "cmr6931h40007mt78swcmtewh",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "דור",
+        "closureReason": "FALSE_ALARM",
+        "note": "פונני פסטרמי"
+      },
+      "timestamp": "2026-07-04T11:00:48.635Z"
+    },
+    {
+      "id": "aa515a28-518e-43b4-864f-fbd48c110507",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.0561,
+        "lng": 34.798336,
+        "targetCount": 1
+      },
+      "timestamp": "2026-07-04T11:01:31.257Z"
+    },
+    {
+      "id": "c835fac4-4548-40aa-8fba-f149c86bb209",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T11:01:31.262Z"
+    },
+    {
+      "id": "ce89eba8-7d0f-4daa-b5b4-ad453d10f1ca",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "message": "חירום AED: דום לב ב-32.0561, 34.7983. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T11:01:31.268Z"
+    },
+    {
+      "id": "ee8d73ae-d69b-4be6-833c-79f69f8c84a4",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 1,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T11:01:31.284Z"
+    },
+    {
+      "id": "64e61e83-b105-4f97-b99b-a591730ce23b",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025366217513984,
+        "lng": 34.77737131715195,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:01:40.228Z"
+    },
+    {
+      "id": "82ff9a20-fbd2-466f-bcd9-d6a6c1d1e7e2",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "דור",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T11:01:40.254Z"
+    },
+    {
+      "id": "9058892c-6a10-410f-bc28-4f5ffa190543",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T11:01:40.259Z"
+    },
+    {
+      "id": "e3917e61-28e1-45dd-ada3-de01581bc780",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025366217513984,
+        "lng": 34.77737131715195,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:01:40.286Z"
+    },
+    {
+      "id": "e789f0f1-9e31-4fc5-bd7c-42298ae2cbed",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025366217513984,
+        "lng": 34.77737131715195,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:01:58.547Z"
+    },
+    {
+      "id": "6e0e79c5-a538-4411-9dba-f3484f00e405",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T11:01:58.569Z"
+    },
+    {
+      "id": "cab51f13-0adc-4513-86fc-5f7c9bbd365b",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דור",
+        "lat": 32.025366217513984,
+        "lng": 34.77737131715195,
+        "source": "gps",
+        "deviceId": "cmr691xjy0003mt78lfcff5zc"
+      },
+      "timestamp": "2026-07-04T11:01:58.594Z"
+    },
+    {
+      "id": "c6b15a09-0583-4836-86e8-dc373a8d4b57",
+      "incidentId": "cmr6958ml000amt78dfghrwgv",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "דור",
+        "closureReason": "AMBULANCE_ORDERED",
+        "note": "סי"
+      },
+      "timestamp": "2026-07-04T11:02:02.935Z"
+    },
+    {
+      "id": "b899bf88-fb5e-41a8-88f8-edbdb572ec03",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "INCIDENT_CREATED",
+      "payload": {
+        "lat": 32.025791,
+        "lng": 34.777612,
+        "targetCount": 2
+      },
+      "timestamp": "2026-07-04T11:17:41.611Z"
+    },
+    {
+      "id": "6e76f493-3fe6-4101-b452-41f12980ec61",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr69ggga000fmt78x3oskyyb",
+        "phone": "039603030",
+        "volunteer": "דותן"
+      },
+      "timestamp": "2026-07-04T11:17:41.617Z"
+    },
+    {
+      "id": "076c597b-665e-465a-b18e-b3a1e0a7f4f0",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr69ggga000fmt78x3oskyyb",
+        "phone": "039603030",
+        "message": "חירום AED: דום לב ב-32.0258, 34.7776. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T11:17:41.623Z"
+    },
+    {
+      "id": "141b6fc5-e91a-4cb7-abfc-fa719d81d00e",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "CELLULAR_PUSH",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "volunteer": "דור"
+      },
+      "timestamp": "2026-07-04T11:17:41.639Z"
+    },
+    {
+      "id": "b73f87f9-3df1-4fd9-8984-5247f2726c63",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "CELLULAR_SMS",
+      "payload": {
+        "deviceId": "cmr691xjy0003mt78lfcff5zc",
+        "phone": "0525294723",
+        "message": "חירום AED: דום לב ב-32.0258, 34.7776. התקשרו 101."
+      },
+      "timestamp": "2026-07-04T11:17:41.644Z"
+    },
+    {
+      "id": "bed1700d-77e3-4cd6-b1a4-ac151e545ddb",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "ALERTING_COMPLETE",
+      "payload": {
+        "cellularSent": 2,
+        "meshtasticDelivered": 0
+      },
+      "timestamp": "2026-07-04T11:17:41.660Z"
+    },
+    {
+      "id": "d5afa7c6-bfbb-4069-8b1f-373227d68d3d",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דותן",
+        "lat": 32.025353055130246,
+        "lng": 34.77738223541346,
+        "source": "gps",
+        "deviceId": "cmr69ggga000fmt78x3oskyyb"
+      },
+      "timestamp": "2026-07-04T11:19:39.100Z"
+    },
+    {
+      "id": "88498454-f326-4161-9b66-178706757e02",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_ACCEPTED",
+      "payload": {
+        "volunteer": "דותן",
+        "deviceId": "cmr69ggga000fmt78x3oskyyb",
+        "via": "volunteer-app"
+      },
+      "timestamp": "2026-07-04T11:19:39.129Z"
+    },
+    {
+      "id": "4873482a-f486-4976-96b6-5ff1e7d5ab50",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_ON_THE_WAY",
+      "payload": {
+        "volunteer": "דותן"
+      },
+      "timestamp": "2026-07-04T11:19:39.136Z"
+    },
+    {
+      "id": "6bbbc57c-f8b0-4c61-9d62-6eb0ac8d1888",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דותן",
+        "lat": 32.025353055130246,
+        "lng": 34.77738223541346,
+        "source": "gps",
+        "deviceId": "cmr69ggga000fmt78x3oskyyb"
+      },
+      "timestamp": "2026-07-04T11:19:39.160Z"
+    },
+    {
+      "id": "a184da38-4b1f-47a3-8170-0bef43d9ad0d",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דותן",
+        "lat": 32.025353055130246,
+        "lng": 34.77738223541346,
+        "source": "gps",
+        "deviceId": "cmr69ggga000fmt78x3oskyyb"
+      },
+      "timestamp": "2026-07-04T11:20:02.507Z"
+    },
+    {
+      "id": "bf5e65e8-55e8-406d-a239-f85898392f3f",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דותן",
+        "lat": 32.02533004177838,
+        "lng": 34.77739044929091,
+        "source": "gps",
+        "deviceId": "cmr69ggga000fmt78x3oskyyb"
+      },
+      "timestamp": "2026-07-04T11:20:43.733Z"
+    },
+    {
+      "id": "bd87f1ea-0a4c-4114-a60d-1adf093fa4f2",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דותן",
+        "lat": 32.02533004177838,
+        "lng": 34.77739044929091,
+        "source": "gps",
+        "deviceId": "cmr69ggga000fmt78x3oskyyb"
+      },
+      "timestamp": "2026-07-04T11:20:52.417Z"
+    },
+    {
+      "id": "a2b08794-86c9-40dc-bbc6-6ba6d15d23cb",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "AED_ARRIVED",
+      "payload": {
+        "volunteer": "דותן"
+      },
+      "timestamp": "2026-07-04T11:20:52.441Z"
+    },
+    {
+      "id": "882ed8dc-821a-4453-92a1-e18d98abf834",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "VOLUNTEER_LOCATION",
+      "payload": {
+        "volunteer": "דותן",
+        "lat": 32.02533004177838,
+        "lng": 34.77739044929091,
+        "source": "gps",
+        "deviceId": "cmr69ggga000fmt78x3oskyyb"
+      },
+      "timestamp": "2026-07-04T11:20:52.465Z"
+    },
+    {
+      "id": "9fac584d-46de-4707-9fea-27b689549530",
+      "incidentId": "cmr69q1cw000imt78emqvexg9",
+      "type": "INCIDENT_CLOSED",
+      "payload": {
+        "volunteer": "דותן",
+        "closureReason": "FALSE_ALARM",
+        "note": "אירוע סגור"
+      },
+      "timestamp": "2026-07-04T11:21:22.080Z"
+    }
+  ]
+}

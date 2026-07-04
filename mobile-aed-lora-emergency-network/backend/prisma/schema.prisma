@@ -1,0 +1,204 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum RegistrationType {
+  MOBILE_AED_WITH_LORA
+  MOBILE_AED_NO_LORA
+  LORA_CARRIER_ONLY
+}
+
+enum AedStatus {
+  OK
+  MAINTENANCE
+  UNKNOWN
+}
+
+enum LoraRole {
+  AED_ATTACHED
+  CARRIER_ONLY
+  GATEWAY
+}
+
+enum SignalStatus {
+  STRONG
+  MEDIUM
+  WEAK
+  OFFLINE
+}
+
+enum IncidentStatus {
+  CREATED
+  ALERTING
+  ACCEPTED
+  ON_THE_WAY
+  AED_ARRIVED
+  CLOSED
+}
+
+enum IncidentClosureReason {
+  AMBULANCE_ORDERED
+  PATIENT_RESPONDING
+  AED_USED
+  MDA_ARRIVED
+  FALSE_ALARM
+  OTHER
+}
+
+enum IncidentCategory {
+  SUSPECTED_CARDIAC_ARREST
+  UNCONSCIOUS_NOT_BREATHING
+  CPR_IN_PROGRESS
+  SEIZURE
+  OTHER_MEDICAL
+}
+
+enum PatientAgeGroup {
+  ADULT
+  CHILD
+  ELDERLY
+  UNKNOWN
+}
+
+enum UrgencyLevel {
+  CRITICAL
+  HIGH
+  MODERATE
+}
+
+enum VolunteerAlertStatus {
+  PENDING
+  ACCEPTED
+  ON_THE_WAY
+  ARRIVED
+  CANCELLED
+}
+
+model User {
+  id               String           @id @default(cuid())
+  firstName        String
+  lastName         String?
+  phone            String
+  registrationType RegistrationType
+  medicalTraining  String?
+  consent          Boolean          @default(true)
+  volunteerOnlineAt DateTime?
+  volunteerLat      Float?
+  volunteerLng      Float?
+  locationSource    String?
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+  aedDevice        AEDDevice?
+  loraDevice       LoRaDevice?
+  volunteerAlerts  VolunteerAlert[]
+}
+
+model AEDDevice {
+  id           String    @id @default(cuid())
+  ownerId      String    @unique
+  hasLora      Boolean
+  loraDeviceId String?   @unique
+  status       AedStatus @default(OK)
+  batteryLevel Int
+  lastLat      Float
+  lastLng      Float
+  lastSeenAt   DateTime
+  isAvailable  Boolean   @default(true)
+  owner        User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+}
+
+model LoRaDevice {
+  id           String       @id @default(cuid())
+  loraId       String       @unique
+  ownerId      String       @unique
+  role         LoraRole
+  batteryLevel Int
+  lastLat      Float
+  lastLng      Float
+  lastSeenAt   DateTime
+  signalStatus SignalStatus @default(MEDIUM)
+  owner        User         @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model RefreshToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  adminId   String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model SimulatorConfig {
+  id                   String   @id @default("default")
+  searchRadiusMeters   Int      @default(3000)
+  noCellularMode       Boolean  @default(false)
+  noGatewayMode        Boolean  @default(false)
+  callForVolunteers    String
+  loraBuyInfo          String
+  maintenanceInfo      String
+  registrationHelp     String
+  updatedAt            DateTime @updatedAt
+}
+
+model Incident {
+  id               String                 @id @default(cuid())
+  lat              Float
+  lng              Float
+  source           String
+  status           IncidentStatus         @default(CREATED)
+  description      String?
+  incidentCategory IncidentCategory?
+  patientAgeGroup  PatientAgeGroup?
+  urgencyLevel     UrgencyLevel?
+  volunteerNote    String?
+  closureReason    IncidentClosureReason?
+  closedAt         DateTime?
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
+  volunteerAlerts  VolunteerAlert[]
+}
+
+model VolunteerAlert {
+  id                  String               @id @default(cuid())
+  incidentId          String
+  userId              String
+  deviceId            String
+  status              VolunteerAlertStatus @default(PENDING)
+  cellularPush        Boolean              @default(false)
+  cellularSms         Boolean              @default(false)
+  meshtasticDelivered Boolean              @default(false)
+  meshtasticGateway   String?
+  meshtasticBeeping   Boolean              @default(false)
+  distanceMeters      Int?
+  etaMinutes          Int?
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  incident            Incident             @relation(fields: [incidentId], references: [id], onDelete: Cascade)
+  user                User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model MaintenanceAlert {
+  id          String   @id @default(cuid())
+  deviceId    String
+  battery     Int
+  isHandled   Boolean  @default(false)
+  contactedAt DateTime?
+  createdAt   DateTime @default(now())
+}

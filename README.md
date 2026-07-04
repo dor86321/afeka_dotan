@@ -51,6 +51,13 @@ hw3/                Homework 3 – n8n AI travel page automation
   google-sheets/    Sheet setup guide
   SUBMISSION_SLIDES.md
   css/hw3.css
+
+mobile-aed-lora-emergency-network/   Web Technologies — AED LoRa emergency network
+  README.md                          Setup, demo, API
+  slide.md                           Presentation slides (Hebrew)
+  frontend/                          Next.js (:3000)
+  backend/                           Express + Prisma (:4000)
+  simulator-service/                 NoSQL events (:4200)
 ```
 
 ## Homework 2 notes
@@ -67,6 +74,41 @@ hw3/                Homework 3 – n8n AI travel page automation
 - Full guide: **[hw3/README.md](./hw3/README.md)** · Overview page: **[hw3/index.html](./hw3/index.html)**
 - **Google Sheet:** https://docs.google.com/spreadsheets/d/1039zHFjCtQtrnEgMc5bQ2wpKAJw-SABn5X9v4So_HKA/edit?usp=sharing (tab: `Sheet1`)
 - Stack: Google Sheets, Groq (free tier), Gmail Send and Wait, GitHub file backup, OpenStreetMap embed.
+
+## Web Technologies — Mobile AED LoRa Emergency Network
+
+Full-stack course project (Web Technologies 10266): emergency AED alerting simulator with hybrid Cellular + LoRa/Meshtastic channels.
+
+| | |
+|---|---|
+| **Folder** | [`mobile-aed-lora-emergency-network/`](./mobile-aed-lora-emergency-network/) |
+| **README** | [`mobile-aed-lora-emergency-network/README.md`](./mobile-aed-lora-emergency-network/README.md) |
+| **Slides** | [`mobile-aed-lora-emergency-network/slide.md`](./mobile-aed-lora-emergency-network/slide.md) |
+| **GitHub** | [https://github.com/dor86321/afeka_dotan](https://github.com/dor86321/afeka_dotan) |
+
+### Quick start
+
+```bash
+cd mobile-aed-lora-emergency-network
+npm install && npm install --prefix backend && npm install --prefix simulator-service && npm install --prefix frontend
+npm run seed
+npm run dev
+```
+
+Open **http://localhost:3000**
+
+### Demo (2 screens)
+
+1. **Volunteer (mobile/incognito):** `/registration` → `/login` (volunteer tab) → `/volunteer`
+2. **Admin (desktop):** `/login` (admin tab, seed `micha`/`1234`) → `/simulator`
+3. Admin creates incident near connected volunteer → volunteer gets alert + sound → accept → arrive → close
+4. Simulator resets automatically — ready for next demo
+
+### Stack
+
+Next.js · Express · Prisma/SQLite · JWT · Leaflet · JSON NoSQL event store
+
+See the project README for API docs, environment variables, and full walkthrough.
 
 ## Student
 
